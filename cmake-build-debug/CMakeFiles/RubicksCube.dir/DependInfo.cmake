@@ -4,9 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/art/CLionProjects/RubicksCube/Abstract Cube/AbstractCube.cpp" "/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/Abstract_Cube/AbstractCube.cpp.o"
-  "/home/art/CLionProjects/RubicksCube/Abstract Cube/Side.cpp" "/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/Abstract_Cube/Side.cpp.o"
-  "/home/art/CLionProjects/RubicksCube/Consol/ConsolOut.cpp" "/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/Consol/ConsolOut.cpp.o"
+  "/home/art/CLionProjects/RubicksCube/Cube/Cube.cpp" "/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o"
+  "/home/art/CLionProjects/RubicksCube/Cube/Side.cpp" "/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/Cube/Side.cpp.o"
   "/home/art/CLionProjects/RubicksCube/Cube3.cpp" "/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/Cube3.cpp.o"
   "/home/art/CLionProjects/RubicksCube/main.cpp" "/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/main.cpp.o"
   )

@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/art/CLionProjects/RubicksCube/Abstract Cube/AbstractCube.h
+/home/art/CLionProjects/RubicksCube/Cube/Cube.h
 Side.h
-/home/art/CLionProjects/RubicksCube/Abstract Cube/Side.h
+/home/art/CLionProjects/RubicksCube/Cube/Side.h
 
-/home/art/CLionProjects/RubicksCube/Abstract Cube/Side.h
-
-/home/art/CLionProjects/RubicksCube/Cube3.cpp
-string
--
-Cube3.h
-/home/art/CLionProjects/RubicksCube/Cube3.h
+/home/art/CLionProjects/RubicksCube/Cube/Side.h
 
 /home/art/CLionProjects/RubicksCube/Cube3.h
-Abstract Cube/AbstractCube.h
-/home/art/CLionProjects/RubicksCube/Abstract Cube/AbstractCube.h
 iostream
 -
 string
 -
+Cube/Side.h
+/home/art/CLionProjects/RubicksCube/Cube/Side.h
+Cube/Cube.h
+/home/art/CLionProjects/RubicksCube/Cube/Cube.h
+
+/home/art/CLionProjects/RubicksCube/main.cpp
+Cube3.h
+/home/art/CLionProjects/RubicksCube/Cube3.h
 

@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RubicksCube.dir/Abstract_Cube/AbstractCube.cpp.o"
-  "CMakeFiles/RubicksCube.dir/Abstract_Cube/Side.cpp.o"
-  "CMakeFiles/RubicksCube.dir/Consol/ConsolOut.cpp.o"
+  "CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o"
+  "CMakeFiles/RubicksCube.dir/Cube/Side.cpp.o"
   "CMakeFiles/RubicksCube.dir/Cube3.cpp.o"
   "CMakeFiles/RubicksCube.dir/main.cpp.o"
   "RubicksCube"

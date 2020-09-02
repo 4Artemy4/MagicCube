@@ -8,9 +8,9 @@
 
 class Side {
 public:
-    Side(int rows, int columns, short color);
+    Side(int size, short color);
     Side();
-    int rows, columns;
+    int size;
     short **matrix;
 };
 

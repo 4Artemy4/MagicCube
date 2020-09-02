@@ -82,22 +82,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Abstract Cube/AbstractCube.cpp">
+		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube/Cube.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Abstract Cube/AbstractCube.h">
+		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube/Cube.h">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Abstract Cube/Side.cpp">
+		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube/Side.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Abstract Cube/Side.h">
-			<Option target="RubicksCube"/>
-		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Consol/ConsolOut.cpp">
-			<Option target="RubicksCube"/>
-		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Consol/ConsolOut.h">
+		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube/Side.h">
 			<Option target="RubicksCube"/>
 		</Unit>
 		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube3.cpp">
