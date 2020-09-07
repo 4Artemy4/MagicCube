@@ -95,26 +95,48 @@ bool Cube3::command(const std::string &commands){
 
 void Cube3::F(bool isInverse) {
     rotateLayer(isInverse, 0);
+    rotations += 'F';
+    if (isInverse) rotations+= '\'';
+    rotations+=' ';
 }
 
 void Cube3::B(bool isInverse) {
     rotateLayer(isInverse, 2);
+    rotations += 'B';
+    if (isInverse) rotations+= '\'';
+    rotations+=' ';
+
 }
 
 void Cube3::L(bool isInverse) {
     rotateLayerVertically(isInverse, 0);
+    rotations += 'L';
+    if (isInverse) rotations+= '\'';
+    rotations+=' ';
+
 }
 
 void Cube3::R(bool isInverse) {
     rotateLayerVertically(isInverse, 2);
+    rotations += 'R';
+    if (isInverse) rotations+= '\'';
+    rotations+=' ';
+
 }
 
 void Cube3::U(bool isInverse) {
     rotateLayerHorizontally(isInverse, 0);
+    rotations += 'U';
+    if (isInverse) rotations+= '\'';
+    rotations+=' ';
+
 }
 
 void Cube3::D(bool isInverse) {
     rotateLayerHorizontally(isInverse, 0);
+    rotations += 'D';
+    if (isInverse) rotations+= '\'';
+    rotations+=' ';
 
 }
 
@@ -150,20 +172,9 @@ void Cube3::rand() {
     }
 }
 
-bool Cube3::check() const {
-    for (int k = 0; k < 5; ++k) {
-        for (int i = 0; i < 3; ++i) {
-            for (int j = 0; j < 3; ++j) {
-                if (sides[currentColor].matrix[i][j] != 0) return false;
-            }
-        }
-    }
-    return true;
-}
-
-void Cube3::load(const std::string &filename) {
-    std::fstream file(filename);
+std::istream &operator>>(std::istream &is, Cube3 &cube) {
     std::string command;
-    getline(file, command);
-    this->command(command);
+    is>>command;
+    cube.command(command);
+    return is;
 }

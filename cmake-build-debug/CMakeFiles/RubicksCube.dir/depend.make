@@ -13,8 +13,18 @@ CMakeFiles/RubicksCube.dir/Cube3.cpp.o: ../Cube/Side.h
 CMakeFiles/RubicksCube.dir/Cube3.cpp.o: ../Cube3.cpp
 CMakeFiles/RubicksCube.dir/Cube3.cpp.o: ../Cube3.h
 
+CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o: ../GUI/Button.cpp
+CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o: ../GUI/Button.h
+
+CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o: ../Cube/Cube.h
+CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o: ../Cube/Side.h
+CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o: ../GUI/Button.h
+CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o: ../GUI/Drawer.cpp
+CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o: ../GUI/Drawer.h
+
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../Cube/Cube.h
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../Cube/Side.h
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../Cube3.h
+CMakeFiles/RubicksCube.dir/main.cpp.o: ../GUI/Drawer.h
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../main.cpp
 

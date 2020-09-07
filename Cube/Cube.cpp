@@ -3,7 +3,10 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "Cube.h"
+
+char Cube::colors[6] = {'W', 'Y', 'R', 'O', 'B', 'G'};
 
 Cube::Cube(int n) {
     size = n;
@@ -15,7 +18,6 @@ Cube::Cube(int n) {
 void Cube::rotateLayerVertically(bool isInverse, int layer) {
     short temp;
     if (isInverse) {
-        // поворачиваем левую грань против часовой стрелки
         for (int i = 0; i < size; ++i) {
             temp = sides[upColor].matrix[i][layer];
             sides[upColor].matrix[i][layer] = sides[currentColor].matrix[i][layer];
@@ -25,7 +27,6 @@ void Cube::rotateLayerVertically(bool isInverse, int layer) {
         }
 
     } else {
-        // поворачиваем левую грань по часовой стрелки
         for (int i = 0; i < size; ++i) {
             temp = sides[downColor].matrix[i][layer];
             sides[downColor].matrix[i][layer] = sides[currentColor].matrix[i][layer];
@@ -35,13 +36,15 @@ void Cube::rotateLayerVertically(bool isInverse, int layer) {
         }
     }
     if (layer == 0)rotateSide(leftColor, !isInverse);
-    else if (layer == size - 1)rotateSide(leftColor, isInverse);
+    else if (layer == size - 1)rotateSide(rightColor, isInverse);
+
+    rotations += 'V' + std::to_string(layer);
+    if (isInverse) rotations+= '\'';
 }
 
 void Cube::rotateLayerHorizontally(bool isInverse, int layer) {
     short temp;
     if (isInverse) {
-        // поворачиваем верхную грань против часовой стрелки
         for (int i = 0; i < size; ++i) {
             temp = sides[rightColor].matrix[layer][i];
             sides[rightColor].matrix[layer][i] = sides[currentColor].matrix[layer][i];
@@ -50,7 +53,6 @@ void Cube::rotateLayerHorizontally(bool isInverse, int layer) {
             sides[backwardColor].matrix[layer][i] = temp;
         }
     } else {
-        // поворачиваем верхную грань по часовой стрелки
         for (int i = 0; i < size; ++i) {
             temp = sides[leftColor].matrix[layer][i];
             sides[leftColor].matrix[layer][i] = sides[currentColor].matrix[layer][i];
@@ -60,13 +62,15 @@ void Cube::rotateLayerHorizontally(bool isInverse, int layer) {
         }
     }
     if (layer == 0)rotateSide(upColor, isInverse);
-    else if (layer == size - 1)rotateSide(upColor, !isInverse);
+    else if (layer == size - 1)rotateSide(downColor, !isInverse);
+
+    rotations += 'H' + std::to_string(layer);
+    if (isInverse) rotations+= '\'';
 }
 
 void Cube::rotateLayer(bool isInverse, int layer) {
     short temp;
     if (isInverse) {
-        // поворачиваем фронтальную грань против часовой стрелки
         for (int i = 0; i < size; ++i) {
             temp = sides[rightColor].matrix[i][layer];
             sides[rightColor].matrix[i][layer] = sides[downColor].matrix[layer][size - 1 - i];
@@ -75,7 +79,6 @@ void Cube::rotateLayer(bool isInverse, int layer) {
             sides[upColor].matrix[size - 1][i] = temp;
         }
     } else {
-        // поворачиваем фронтальную грань по часовой стрелки
         for (int i = 0; i < size; ++i) {
             temp = sides[leftColor].matrix[size - 1 - i][size - 1 - layer];
             sides[leftColor].matrix[size - 1 - i][size - 1 - layer] = sides[downColor].matrix[layer][size - 1 - i];
@@ -85,7 +88,10 @@ void Cube::rotateLayer(bool isInverse, int layer) {
         }
     }
     if (layer == 0) rotateSide(currentColor, isInverse);
-    if (layer == size - 1)rotateSide(currentColor, !isInverse);
+    if (layer == size - 1)rotateSide(backwardColor, !isInverse);
+
+    rotations += 'L' + std::to_string(layer);
+    if (isInverse) rotations+= '\'';
 }
 
 void Cube::rotateSide(int side, bool isInverse) {
@@ -117,56 +123,141 @@ void Cube::rotateSide(int side, bool isInverse) {
     delete[] original;
 }
 
-void Cube::redraw() const {
-    for (int i = 0; i < size/2; ++i) {
-        std::cout << "   ";
-    }
-    std::cout << convertCodeToColor(upColor) << std::endl;
-    for (int i = 0; i < size; ++i) {
-        if (i == size/2) {
-            std::cout << convertCodeToColor(leftColor) << ' ';
-            for (int j = 0; j < size; ++j) {
-                std::cout << convertCodeToColor(sides[currentColor].matrix[i][j]) << ' ';
-            }
-            std::cout << convertCodeToColor(rightColor);
-        }
-        else{
-            std::cout << "  ";
-            for (int j = 0; j < size; ++j) {
-                std::cout << convertCodeToColor(sides[currentColor].matrix[i][j]) << ' ';
-            }
-        }
-        std::cout << std::endl;
-    }
-
-    for (int i = 0; i < size/2; ++i) {
-        std::cout << "   ";
-    }
-    std::cout << convertCodeToColor(downColor) << std::endl;
+char Cube::convertCodeToColor(short colorCode) {
+    return colors[colorCode];
 }
 
-char Cube::convertCodeToColor(short colorCode) {
-    // White
-    // Yellow
-    // Red
-    // Orange
-    // Blue
-    // Green
-    // Error @Debug
-
-    switch (colorCode) {
-        case 0:
-            return 'W';
-        case 1:
-            return 'Y';
-        case 2:
-            return 'R';
-        case 3:
-            return 'O';
-        case 4:
-            return 'B';
-        case 5:
-            return 'G';
+std::ostream &operator<<(std::ostream &os, const Cube &cube) {
+    for (int i = 0; i < cube.size / 2 + 1; ++i) {
+        os << "  ";
     }
-    return 'E';
+    os << cube.convertCodeToColor(cube.upColor) << std::endl;
+    for (int i = 0; i < cube.size; ++i) {
+        if (i == cube.size / 2) {
+            os << cube.convertCodeToColor(cube.leftColor) << ' ';
+            for (int j = 0; j < cube.size; ++j) {
+                os << cube.convertCodeToColor(cube.sides[cube.currentColor].matrix[i][j]) << ' ';
+            }
+            os << cube.convertCodeToColor(cube.rightColor);
+        } else {
+            os << "  ";
+            for (int j = 0; j < cube.size; ++j) {
+                os << cube.convertCodeToColor(cube.sides[cube.currentColor].matrix[i][j]) << ' ';
+            }
+        }
+        os << std::endl;
+    }
+
+    for (int i = 0; i < cube.size / 2 + 1; ++i) {
+        os << "  ";
+    }
+    os << cube.convertCodeToColor(cube.downColor) << std::endl;
+    return os;
+}
+
+std::istream &operator>>(std::istream &is, Cube &cube) {
+    std::string command;
+    is >> command;
+    cube.command(command);
+    return is;
+}
+
+bool Cube::command(const std::string &commands) {
+    short times;
+    bool isInverse;
+    int layerNum;
+    for (int i = 0; i < commands.size(); ++i) {
+        times = 1;
+        isInverse = false;
+        if (commands[i] != ' ') {
+            if (commands[i] == '2') {
+                times = 2;
+                i++;
+            }
+
+            if (commands[i + 1] == '\'') isInverse = true;
+
+            std::string layerNumber;
+            int j = i + 2;
+            while (commands[j] >= '0' && commands[j] <= '9') {
+                layerNumber += commands[j];
+                j++;
+            }
+            sscanf(layerNumber.c_str(), "%d", &layerNum);
+            switch (commands[i]) {
+                case 'V': {
+                    for (int j = 0; j < times; ++j) {
+                        rotateLayerVertically(isInverse, layerNum);
+                    }
+                    break;
+                }
+                case 'H': {
+                    for (int j = 0; j < times; ++j) {
+                        rotateLayerHorizontally(isInverse, layerNum);
+                    }
+                    break;
+                }
+                case 'L': {
+                    for (int j = 0; j < times; ++j) {
+                        rotateLayerHorizontally(isInverse, layerNum);
+                    }
+                    break;
+                }
+                default:
+                    return false;
+            }
+            while (commands[i] != ' ' && i < commands.size())i++;
+        }
+    }
+    return true;
+}
+
+void Cube::rand() {
+    srand(time(0));
+    for (int i = 0; i < 3*size; ++i) {
+        switch (std::rand()%3) {
+            case 0:{
+                rotateLayerVertically(false, std::rand()%size);
+                break;
+            }
+            case 1:{
+                rotateLayerHorizontally(false, std::rand()%size);
+                break;
+            }
+            case 2:{
+                rotateLayer(false, std::rand()%size);
+                break;
+            }
+        }
+    }
+}
+
+bool Cube::check() const {
+    for (int k = 0; k < 5; ++k) {
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j < size; ++j) {
+                if (sides[currentColor].matrix[i][j] != 0) return false;
+            }
+        }
+    }
+    return true;
+}
+
+void Cube::load(const std::string &filename) {
+    std::fstream file(filename);
+    std::string command;
+    getline(file, command);
+    this->command(command);
+}
+
+int Cube::getSize() const {
+    return size;
+}
+
+const std::string &Cube::getRotations() const {
+    return rotations;
+}
+
+short Cube::getColor(short sideColor, int i, int j) const {
+    return sides[sideColor].matrix[i][j];
 }

@@ -16,7 +16,7 @@ class Cube3: public Cube {
 
 public:
     Cube3();
-    bool command(const std::string &commands);
+    bool command(const std::string &commands) override;
     void F(bool isInverse);
     void B(bool isInverse);
     void R(bool isInverse);
@@ -24,9 +24,9 @@ public:
     void U(bool isInverse);
     void D(bool isInverse);
 
-    void rand();
-    bool check() const;
-    void load(const std::string &filename);
+    friend std::istream &operator>>(std::istream &is, Cube3 &cube);
+
+    void rand() override;
 };
 
 

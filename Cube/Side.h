@@ -8,10 +8,17 @@
 
 class Side {
 public:
+    ///\brief Constructor
+    ///\details Make one of the cube side
+    ///\param size side dimensions
+    ///\param color color of te side
     Side(int size, short color);
+
+    ///\brief Default constructor
     Side();
-    int size;
-    short **matrix;
+
+    int size;       ///< side dimensions
+    short **matrix; ///< side matrix
 };
 
 

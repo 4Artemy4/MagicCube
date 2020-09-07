@@ -232,6 +232,12 @@ RubicksCube_BINARY_DIR:STATIC=/home/art/CLionProjects/RubicksCube/cmake-build-de
 //Value Computed by CMake
 RubicksCube_SOURCE_DIR:STATIC=/home/art/CLionProjects/RubicksCube
 
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=/usr/lib64/cmake/SFML
+
+//Path to a file.
+SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

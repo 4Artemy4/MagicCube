@@ -7,22 +7,40 @@
 #IncludeRegexTransform: 
 
 /home/art/CLionProjects/RubicksCube/Cube/Cube.h
+ostream
+-
 Side.h
 /home/art/CLionProjects/RubicksCube/Cube/Side.h
 
 /home/art/CLionProjects/RubicksCube/Cube/Side.h
 
-/home/art/CLionProjects/RubicksCube/Cube3.h
+/home/art/CLionProjects/RubicksCube/GUI/Button.h
+SFML/Graphics/RenderWindow.hpp
+-
+SFML/Graphics/RectangleShape.hpp
+-
+SFML/Graphics/Text.hpp
+-
+
+/home/art/CLionProjects/RubicksCube/GUI/Drawer.cpp
+Drawer.h
+/home/art/CLionProjects/RubicksCube/GUI/Drawer.h
+Button.h
+/home/art/CLionProjects/RubicksCube/GUI/Button.h
+SFML/Graphics/RenderWindow.hpp
+-
+SFML/Window/Event.hpp
+-
+SFML/Window.hpp
+-
 iostream
 -
-string
--
-Cube/Side.h
-/home/art/CLionProjects/RubicksCube/Cube/Side.h
-Cube/Cube.h
-/home/art/CLionProjects/RubicksCube/Cube/Cube.h
 
-/home/art/CLionProjects/RubicksCube/main.cpp
-Cube3.h
-/home/art/CLionProjects/RubicksCube/Cube3.h
+/home/art/CLionProjects/RubicksCube/GUI/Drawer.h
+SFML/Graphics/RenderWindow.hpp
+-
+SFML/Graphics/Text.hpp
+-
+../Cube/Cube.h
+/home/art/CLionProjects/RubicksCube/Cube/Cube.h
 

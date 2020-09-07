@@ -224,6 +224,60 @@ Cube3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/Cube3.cpp.s
 .PHONY : Cube3.cpp.s
 
+GUI/Button.o: GUI/Button.cpp.o
+
+.PHONY : GUI/Button.o
+
+# target to build an object file
+GUI/Button.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o
+.PHONY : GUI/Button.cpp.o
+
+GUI/Button.i: GUI/Button.cpp.i
+
+.PHONY : GUI/Button.i
+
+# target to preprocess a source file
+GUI/Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/GUI/Button.cpp.i
+.PHONY : GUI/Button.cpp.i
+
+GUI/Button.s: GUI/Button.cpp.s
+
+.PHONY : GUI/Button.s
+
+# target to generate assembly for a file
+GUI/Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/GUI/Button.cpp.s
+.PHONY : GUI/Button.cpp.s
+
+GUI/Drawer.o: GUI/Drawer.cpp.o
+
+.PHONY : GUI/Drawer.o
+
+# target to build an object file
+GUI/Drawer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o
+.PHONY : GUI/Drawer.cpp.o
+
+GUI/Drawer.i: GUI/Drawer.cpp.i
+
+.PHONY : GUI/Drawer.i
+
+# target to preprocess a source file
+GUI/Drawer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.i
+.PHONY : GUI/Drawer.cpp.i
+
+GUI/Drawer.s: GUI/Drawer.cpp.s
+
+.PHONY : GUI/Drawer.s
+
+# target to generate assembly for a file
+GUI/Drawer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.s
+.PHONY : GUI/Drawer.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -269,6 +323,12 @@ help:
 	@echo "... Cube3.o"
 	@echo "... Cube3.i"
 	@echo "... Cube3.s"
+	@echo "... GUI/Button.o"
+	@echo "... GUI/Button.i"
+	@echo "... GUI/Button.s"
+	@echo "... GUI/Drawer.o"
+	@echo "... GUI/Drawer.i"
+	@echo "... GUI/Drawer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

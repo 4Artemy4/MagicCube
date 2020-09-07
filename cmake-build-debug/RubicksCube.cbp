@@ -5,7 +5,7 @@
 		<Option title="RubicksCube"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\SFML\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/art/CLionProjects/RubicksCube/cmake-build-debug"/>
@@ -100,11 +100,38 @@
 		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube3.h">
 			<Option target="RubicksCube"/>
 		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/GUI/Button.cpp">
+			<Option target="RubicksCube"/>
+		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/GUI/Button.h">
+			<Option target="RubicksCube"/>
+		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/GUI/Drawer.cpp">
+			<Option target="RubicksCube"/>
+		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/GUI/Drawer.h">
+			<Option target="RubicksCube"/>
+		</Unit>
 		<Unit filename="/home/art/CLionProjects/RubicksCube/main.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
 		<Unit filename="/home/art/CLionProjects/RubicksCube/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
