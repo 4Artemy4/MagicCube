@@ -14,8 +14,11 @@ CMakeFiles/RubicksCube.dir/Cube3.cpp.o
  /home/art/CLionProjects/RubicksCube/Cube3.cpp
  /home/art/CLionProjects/RubicksCube/Cube3.h
 CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o
+ /home/art/CLionProjects/RubicksCube/Cube/Cube.h
+ /home/art/CLionProjects/RubicksCube/Cube/Side.h
  /home/art/CLionProjects/RubicksCube/GUI/Button.cpp
  /home/art/CLionProjects/RubicksCube/GUI/Button.h
+ /home/art/CLionProjects/RubicksCube/GUI/Drawer.h
 CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o
  /home/art/CLionProjects/RubicksCube/Cube/Cube.h
  /home/art/CLionProjects/RubicksCube/Cube/Side.h

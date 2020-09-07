@@ -22,9 +22,9 @@ public:
 
     void updateCube(sf::RenderWindow &window);
 
-    static void mashButton();
+    void mashButton();
 
-    static void solveButton();
+    void solveButton();
 
     void commandLine(char command, sf::RenderWindow &window);
 

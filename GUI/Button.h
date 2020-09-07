@@ -8,16 +8,15 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/Text.hpp>
+#include "Drawer.h"
 
 class Button : public sf::RectangleShape {
 private:
     sf::Text text;
     sf::RenderWindow &parent;
-    void (*function)();
 public:
     Button(sf::RenderWindow &window);
-    void isPressed(sf::Vector2f position);
-    void onCick(void (*fun)());
+    bool isPressed(sf::Vector2i position);
     void setText(const std::string &stroke);
 };
 

@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "Button.h"
+#include "Drawer.h"
 
 Button::Button(sf::RenderWindow &window) : parent(window) {
     sf::Texture *buttonTexture = new sf::Texture();
@@ -12,12 +13,11 @@ Button::Button(sf::RenderWindow &window) : parent(window) {
     update();
 }
 
-void Button::isPressed(sf::Vector2f position) {
-    if (getPosition() == position) function();
-}
-
-void Button::onCick(void (*fun)()) {
-    function = fun;
+bool Button::isPressed(sf::Vector2i position) {
+    if ((position.x >= getPosition().x && position.x <= getPosition().x + getSize().x) &&
+        (position.y >= getPosition().y && position.y <= getPosition().y + getSize().y))
+        return true;
+    return false;
 }
 
 void Button::setText(const std::string &stroke) {
@@ -27,7 +27,7 @@ void Button::setText(const std::string &stroke) {
     text.setFont(font);
     text.setCharacterSize(30);
     text.setFillColor(sf::Color::Black);
-    text.setPosition(getPosition().x + getSize().x/2 - stroke.size()*9, getPosition().y + getSize().y / 2 - 20);
+    text.setPosition(getPosition().x + getSize().x / 2 - stroke.size() * 9, getPosition().y + getSize().y / 2 - 20);
     parent.draw(text);
 //    update();
 }

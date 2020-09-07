@@ -16,7 +16,7 @@ class Cube3: public Cube {
 
 public:
     Cube3();
-    bool command(const std::string &commands) override;
+    bool command(const std::string &commands);
     void F(bool isInverse);
     void B(bool isInverse);
     void R(bool isInverse);

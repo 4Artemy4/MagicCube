@@ -19,11 +19,6 @@ protected:
 
     void rotateSide(int side, bool isInverse);
 
-public:
-
-    ///\brief Constructor
-    Cube(int n);
-
     ///\brief Convert color code to color char
     ///\param colorCode
     ///\details: \n
@@ -46,6 +41,11 @@ public:
     ///\brief Rotate layer
     ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
     void rotateLayer(bool isInverse, int layer);
+
+public:
+
+    ///\brief Constructor
+    Cube(int n);
 
     ///\brief Output stream operator
     ///\param os output stream
@@ -72,6 +72,8 @@ public:
     const std::string &getRotations() const;
 
     short getColor(short sideColor, int i, int j)const;
+
+    void solve();
 };
 
 
