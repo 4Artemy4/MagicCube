@@ -1,40 +1,9 @@
 #include <string>
-#include <fstream>
 #include "Cube3.h"
 
 
-/*
- * Нумерация массивов
- *
- *                    [0,0] [0,1] [0,2]
- *                    [1,0]   R   [1,2]
- *                    [2,0] [2,1] [2,2]
- *
- * [0,0] [0,1] [0,2]  [0,0] [0,1] [0,2]  [0,0] [0,1] [0,2]
- * [1,0]   B   [1,2]  [1,0]   W   [1,2]  [1,0]   G   [1,2]
- * [2,0] [2,1] [2,2]  [2,0] [2,1] [2,2]  [2,0] [2,1] [2,2]
- *
- *                    [0,0] [0,1] [0,2]
- *                    [1,0]   O   [1,2]
- *                    [2,0] [2,1] [2,2]
- *
-*/
 Cube3::Cube3(): Cube(3){}
 
-/*
-Преобразование Языка вращения кубика Рубика в
-последвательность поворотов
-F - поворот фронтальной грани
-B - поворот задней грани
-L - поворот левой грани
-R - поворот правой грани
-U - поворот верхней грани
-D - поворот нижней грани
-
-Все повороты выполняются по часовой стрелке
-Если после буквы стоит ' - поворот выполняется против часовой стрелки
-Если перед буквой стоит число 2 - выполняется двойной поворот (на 180 градусов)
-*/
 bool Cube3::command(const std::string &commands){
     short times;
     bool isInverse;
@@ -140,36 +109,45 @@ void Cube3::D(bool isInverse) {
 
 }
 
-void Cube3::rand() {
+std::string Cube3::rand() {
+    std::string result;
     srand(time(0));
     for (int i = 0; i < 15; ++i) {
         switch (std::rand()%6) {
             case 0:{
                 F(false);
+                result+='F';
                 break;
             }
             case 1:{
                 B(false);
+                result+='B';
                 break;
             }
             case 2:{
                 L(false);
+                result+='L';
                 break;
             }
             case 3:{
                 R(false);
+                result+='R';
                 break;
             }
             case 4:{
                 U(false);
+                result+='4';
                 break;
             }
             case 5:{
-                B(false);
+                D(false);
+                result+='D';
                 break;
             }
         }
+        result+=' ';
     }
+    return result;
 }
 
 std::istream &operator>>(std::istream &is, Cube3 &cube) {

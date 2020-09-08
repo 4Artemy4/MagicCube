@@ -12,12 +12,26 @@
 
 class Button : public sf::RectangleShape {
 private:
-    sf::Text text;
-    sf::RenderWindow &parent;
+    sf::Text text;              ///< Text on the button
+    sf::RenderWindow &parent;   ///< mainWindow
 public:
+    ///\brief Constructor
+    ///\param window - mainWindow
     Button(sf::RenderWindow &window);
+
+    ///\brief Compare mouse and button coordinates
+    ///\param position - mouse coordinates
+    ///\return true - mouse is located in button aria
     bool isPressed(sf::Vector2i position);
+
+    ///\brief Set button Text
     void setText(const std::string &stroke);
+
+    ///\brief Getter for button text
+    const sf::Text &getText() const;
+
+    ///\brief Getter for button parent
+    sf::RenderWindow &getParent() const;
 };
 
 

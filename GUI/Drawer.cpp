@@ -9,8 +9,6 @@
 #include <SFML/Window.hpp>
 #include <iostream>
 
-#define ITEM(x) case sf::Keyboard:: ## x : ret = #x; break;
-
 Drawer::Drawer(Cube cb) : cube(cb) {}
 
 void Drawer::mainWindow() {
@@ -18,9 +16,9 @@ void Drawer::mainWindow() {
     window.clear(sf::Color(192, 192, 192));
 
     commandsFont.loadFromFile("GUI/CommandFont.ttf");
-    oldCommands.setFont(commandsFont);
-    oldCommands.setCharacterSize(30);
-    oldCommands.setFillColor(sf::Color::Black);
+    CommandLine.setFont(commandsFont);
+    CommandLine.setCharacterSize(30);
+    CommandLine.setFillColor(sf::Color::Black);
 
     Button mash(window);
     mash.setPosition(100, 100);
@@ -122,8 +120,15 @@ void Drawer::mainWindow() {
                 break;
             }
             case sf::Event::MouseButtonPressed : {
-                if (mash.isPressed(sf::Mouse::getPosition(window))) mashButton();
-                if (solve.isPressed(sf::Mouse::getPosition(window))) solveButton();
+                if (mash.isPressed(sf::Mouse::getPosition(window))) {
+                    window.draw(commandField);
+                    CommandLine.setString(mashButton());
+                    commandLine('\b', window);
+                }
+                if (solve.isPressed(sf::Mouse::getPosition(window))) {
+                    window.draw(commandField);
+                    solveButton();
+                }
                 updateCube(window);
                 window.display();
                 sf::sleep(sf::milliseconds(10));
@@ -177,8 +182,8 @@ void Drawer::updateCube(sf::RenderWindow &window) {
     }
 }
 
-void Drawer::mashButton() {
-    cube.rand();
+std::string Drawer::mashButton() {
+    return cube.rand();
 }
 
 void Drawer::solveButton() {
@@ -187,17 +192,17 @@ void Drawer::solveButton() {
 
 void Drawer::commandLine(char command, sf::RenderWindow &window) {
     if (command == '\b')
-        oldCommands.setString(oldCommands.getString().substring(0, oldCommands.getString().getSize() - 1));
+        CommandLine.setString(CommandLine.getString().substring(0, CommandLine.getString().getSize() - 1));
     else if (command == 'V' || command == 'H' || command == 'P')
-        oldCommands.setString(oldCommands.getString() + " " + command);
+        CommandLine.setString(CommandLine.getString() + " " + command);
     else {
-        oldCommands.setString(oldCommands.getString() + command);
+        CommandLine.setString(CommandLine.getString() + command);
     }
-    oldCommands.setPosition(50, 700);
-    window.draw(oldCommands);
+    CommandLine.setPosition(50, 700);
+    window.draw(CommandLine);
 }
 
 void Drawer::enterCommand() {
     cube.solve();
-    cube.command(oldCommands.getString());
+    cube.command(CommandLine.getString());
 }

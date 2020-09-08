@@ -2,7 +2,6 @@
 // Created by art on 9/3/20.
 //
 
-#include <iostream>
 #include <fstream>
 #include "Cube.h"
 
@@ -17,6 +16,7 @@ Cube::Cube(int n) {
 
 void Cube::rotateLayerVertically(bool isInverse, int layer) {
     short temp;
+    if (size % 2 == 1 && layer == size / 2) return;
     if (isInverse) {
         for (int i = 0; i < size; ++i) {
             temp = sides[upColor].matrix[i][layer];
@@ -43,6 +43,7 @@ void Cube::rotateLayerVertically(bool isInverse, int layer) {
 
 void Cube::rotateLayerHorizontally(bool isInverse, int layer) {
     short temp;
+    if (size % 2 == 1 && layer == size / 2) return;
     if (isInverse) {
         for (int i = 0; i < size; ++i) {
             temp = sides[rightColor].matrix[layer][i];
@@ -67,6 +68,7 @@ void Cube::rotateLayerHorizontally(bool isInverse, int layer) {
 
 void Cube::rotateLayer(bool isInverse, int layer) {
     short temp;
+    if (size % 2 == 1 && layer == size / 2) return;
     if (isInverse) {
         for (int i = 0; i < size; ++i) {
             temp = sides[rightColor].matrix[i][layer];
@@ -159,22 +161,19 @@ std::istream &operator>>(std::istream &is, Cube &cube) {
 }
 
 bool Cube::command(const std::string &commands) {
-    short times;
     bool isInverse;
-    int layerNum=0;
+    int layerNum = 0;
     for (int i = 0; i < commands.size(); ++i) {
-        times = 1;
         isInverse = false;
-        if (commands[i] != ' ') {
-            if (commands[i] == '2') {
-                times = 2;
-                i++;
+        if (commands[i] == 'V' || commands[i] == 'H' || commands[i] == 'P') {
+            layerNum = 0;
+            int j = i+1;
+            if (commands[i + 1] == '\'') {
+                isInverse = true;
+                j++;
             }
 
-            if (commands[i + 1] == '\'') isInverse = true;
-
             std::string layerNumber;
-            int j = i + 2;
             while (commands[j] >= '0' && commands[j] <= '9') {
                 layerNumber += commands[j];
                 j++;
@@ -182,30 +181,24 @@ bool Cube::command(const std::string &commands) {
             sscanf(layerNumber.c_str(), "%d", &layerNum);
             switch (commands[i]) {
                 case 'V': {
-                    for (int j = 0; j < times; ++j) {
-                        rotateLayerVertically(isInverse, layerNum);
-                        rotations += 'V';
-                        if (isInverse) rotations+= '\'';
-                        rotations += std::to_string(layerNum);
-                    }
+                    rotateLayerVertically(isInverse, layerNum);
+                    rotations += 'V';
+                    if (isInverse) rotations += '\'';
+                    rotations += std::to_string(layerNum);
                     break;
                 }
                 case 'H': {
-                    for (int j = 0; j < times; ++j) {
-                        rotateLayerHorizontally(isInverse, layerNum);
-                        rotations += 'H';
-                        if (isInverse) rotations+= '\'';
-                        rotations += std::to_string(layerNum);
-                    }
+                    rotateLayerHorizontally(isInverse, layerNum);
+                    rotations += 'H';
+                    if (isInverse) rotations += '\'';
+                    rotations += std::to_string(layerNum);
                     break;
                 }
                 case 'P': {
-                    for (int j = 0; j < times; ++j) {
-                        rotateLayer(isInverse, layerNum);
-                        rotations += 'P';
-                        if (isInverse) rotations+= '\'';
-                        rotations += std::to_string(layerNum);
-                    }
+                    rotateLayer(isInverse, layerNum);
+                    rotations += 'P';
+                    if (isInverse) rotations += '\'';
+                    rotations += std::to_string(layerNum);
                     break;
                 }
                 default:
@@ -217,24 +210,33 @@ bool Cube::command(const std::string &commands) {
     return true;
 }
 
-void Cube::rand() {
+std::string Cube::rand() {
+    std::string result;
     srand(time(0));
-    for (int i = 0; i < 3*size; ++i) {
-        switch (std::rand()%3) {
-            case 0:{
-                rotateLayerVertically(false, std::rand()%size);
+    const int times = std::rand()%(5*size);
+    int layer;
+    for (int i = 0; i < times; ++i) {
+        layer = std::rand()%size;
+        switch (std::rand() % 3) {
+            case 0: {
+                rotateLayerVertically(false, layer);
+                result += 'V' + std::to_string(layer);
                 break;
             }
-            case 1:{
-                rotateLayerHorizontally(false, std::rand()%size);
+            case 1: {
+                rotateLayerHorizontally(false, std::rand() % size);
+                result += 'H' + std::to_string(layer);
                 break;
             }
-            case 2:{
-                rotateLayer(false, std::rand()%size);
+            case 2: {
+                rotateLayer(false, std::rand() % size);
+                result += 'P' + std::to_string(layer);
                 break;
             }
         }
+        result+=' ';
     }
+    return result;
 }
 
 bool Cube::check() const {
@@ -288,4 +290,19 @@ void Cube::solve() {
         }
     }
 
+}
+
+bool Cube::operator==(const Cube &rhs) const {
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < size; ++j) {
+            for (int k = 0; k < size; ++k) {
+                if (sides[i].matrix[i][j] != rhs.sides[i].matrix[i][j]) return false;
+            }
+        }
+    }
+    return true;
+}
+
+bool Cube::operator!=(const Cube &rhs) const {
+    return !(rhs == *this);
 }

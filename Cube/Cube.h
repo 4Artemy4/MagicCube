@@ -11,23 +11,23 @@
 
 class Cube {
 protected:
-    Side sides[6];
-    int size;
-    static char colors[6];
+    Side sides[6];          ///< Sides of the Cube
+    int size;               ///< Cube dimensions
+    static char colors[6];  ///< Array for translating colorCode to Color
     const short currentColor = 0, backwardColor = 1, upColor = 2, downColor = 3, leftColor = 4, rightColor = 5;
-    std::string rotations;
+    std::string rotations;  ///< List of the last commands
 
     void rotateSide(int side, bool isInverse);
 
     ///\brief Convert color code to color char
     ///\param colorCode
     ///\details: \n
-    /// 0 - White
-    /// 1 - Yellow
-    /// 2 - Red
-    /// 3 - Orange
-    /// 4 - Blue
-    /// 5 - Green
+    /// 0 - White \n
+    /// 1 - Yellow \n
+    /// 2 - Red \n
+    /// 3 - Orange \n
+    /// 4 - Blue \n
+    /// 5 - Green \n
     static char convertCodeToColor(short colorCode);
 
     ///\brief Rotate layer vertically
@@ -59,21 +59,46 @@ public:
     ///\return Output stream
     friend std::istream &operator>>(std::istream &is, Cube &cube);
 
+    ///\brief Command for cube
+    ///\details Convert commands in the "Cube rotation language" into the program commands
+    ///\param commands string with commands
+    ///\return true - if all commands are correct
     virtual bool command(const std::string &commands);
 
-    virtual void rand();
+    ///\brief Random commands
+    ///\return string with commands in the "Cube rotation language"
+    virtual std::string rand();
 
+    ///\brief Is Cube compiled?
+    ///\return true - is compiled
     bool check() const;
 
+    ///\brief Load Cube from the file
+    ///\details Load string in the "Cube rotation language" from the file
+    ///\param filename
     void load(const std::string &filename);
 
+    ///\brief Get Cube dimensions
+    ///\return Dimensions
     int getSize() const;
 
+    ///\brief Getter for last rotations list
+    ///\return String in "Cube rotation language"
     const std::string &getRotations() const;
 
+    ///\brief Getter for Cube elements color
+    ///\param sideColor Source of information
+    ///\param i row
+    ///\param j column
     short getColor(short sideColor, int i, int j)const;
 
+    ///\brief Solve Cube
+    ///\details Clearing rotation, recolor sides
     void solve();
+
+    bool operator==(const Cube &rhs) const;
+
+    bool operator!=(const Cube &rhs) const;
 };
 
 

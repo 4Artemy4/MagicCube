@@ -29,5 +29,13 @@ void Button::setText(const std::string &stroke) {
     text.setFillColor(sf::Color::Black);
     text.setPosition(getPosition().x + getSize().x / 2 - stroke.size() * 9, getPosition().y + getSize().y / 2 - 20);
     parent.draw(text);
-//    update();
 }
+
+const sf::Text &Button::getText() const {
+    return text;
+}
+
+sf::RenderWindow &Button::getParent() const {
+    return parent;
+}
+
