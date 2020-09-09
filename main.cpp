@@ -4,7 +4,7 @@
 int main() {
 
     Cube cube(3);
-//    cube.command("H'");
+    cube.command("H'");
     Drawer dr(cube);
     dr.mainWindow();
     std::cout << cube;
@@ -17,6 +17,6 @@ int main() {
 //    cube.solve();
 //    std::cout << cube;
 
-
     return 0;
 }
+

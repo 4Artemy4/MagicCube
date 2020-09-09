@@ -1,6 +1,7 @@
 #include <string>
 #include "Cube3.h"
 
+#define COMMAND(x)case '\''x'\''  : { for (int j = 0; j < times; ++j) {x(isInverse);}break;}
 
 Cube3::Cube3(): Cube(3){}
 
@@ -63,14 +64,14 @@ bool Cube3::command(const std::string &commands){
 }
 
 void Cube3::F(bool isInverse) {
-    rotateLayer(isInverse, 0);
+    rotateFrontLayer(isInverse, 0);
     rotations += 'F';
     if (isInverse) rotations+= '\'';
     rotations+=' ';
 }
 
 void Cube3::B(bool isInverse) {
-    rotateLayer(isInverse, 2);
+    rotateFrontLayer(isInverse, 2);
     rotations += 'B';
     if (isInverse) rotations+= '\'';
     rotations+=' ';

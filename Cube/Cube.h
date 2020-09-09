@@ -10,6 +10,31 @@
 #include "Side.h"
 
 class Cube {
+private:
+    void rotateVertical(int layer);
+
+    void rotateVerticalInverse(int layer);
+
+    void rotateHorizontal(int layer);
+
+    void rotateHorizontalInverse(int layer);
+
+    void rotateFront(int layer);
+
+    void rotateFrontInverse(int layer);
+
+    void initMatrix(short **matrix, short side);
+
+    void deleteMatrix(short **matrix) const;
+
+    void addVerticalRotationCommand(bool isInverse, int layerNum);
+
+    void addHorizontalRotationCommand(bool isInverse, int layerNum);
+
+    void addFrontRotationCommand(bool isInverse, int layerNum);
+
+    static int stringToInt(const std::string &commands, int j);
+
 protected:
     Side sides[6];          ///< Sides of the Cube
     int size;               ///< Cube dimensions
@@ -17,7 +42,7 @@ protected:
     const short currentColor = 0, backwardColor = 1, upColor = 2, downColor = 3, leftColor = 4, rightColor = 5;
     std::string rotations;  ///< List of the last commands
 
-    void rotateSide(int side, bool isInverse);
+    void rotateSide(short side, bool isInverse);
 
     ///\brief Convert color code to color char
     ///\param colorCode
@@ -38,9 +63,9 @@ protected:
     ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
     void rotateLayerHorizontally(bool isInverse, int layer);
 
-    ///\brief Rotate layer
+    ///\brief Rotate Front layer
     ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
-    void rotateLayer(bool isInverse, int layer);
+    void rotateFrontLayer(bool isInverse, int layer);
 
 public:
 
@@ -90,15 +115,18 @@ public:
     ///\param sideColor Source of information
     ///\param i row
     ///\param j column
-    short getColor(short sideColor, int i, int j)const;
+    short getColor(short sideColor, int i, int j) const;
 
     ///\brief Solve Cube
     ///\details Clearing rotation, recolor sides
     void solve();
 
+    ///\brief Equality operator
     bool operator==(const Cube &rhs) const;
 
+    ///\brief Equality operator
     bool operator!=(const Cube &rhs) const;
+
 };
 
 
