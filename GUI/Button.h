@@ -19,6 +19,8 @@ public:
     ///\param window - mainWindow
     Button(sf::RenderWindow &window);
 
+    Button();
+
     ///\brief Compare mouse and button coordinates
     ///\param position - mouse coordinates
     ///\return true - mouse is located in button aria

@@ -14,16 +14,6 @@ Side.h
 
 /home/art/CLionProjects/RubicksCube/Cube/Side.h
 
-/home/art/CLionProjects/RubicksCube/Cube3.h
-iostream
--
-string
--
-Cube/Side.h
-/home/art/CLionProjects/RubicksCube/Cube/Side.h
-Cube/Cube.h
-/home/art/CLionProjects/RubicksCube/Cube/Cube.h
-
 /home/art/CLionProjects/RubicksCube/GUI/Drawer.h
 SFML/Graphics/RenderWindow.hpp
 -
@@ -33,8 +23,8 @@ SFML/Graphics/Text.hpp
 /home/art/CLionProjects/RubicksCube/Cube/Cube.h
 
 /home/art/CLionProjects/RubicksCube/main.cpp
-Cube3.h
-/home/art/CLionProjects/RubicksCube/Cube3.h
+Cube/Cube.h
+/home/art/CLionProjects/RubicksCube/Cube/Cube.h
 GUI/Drawer.h
 /home/art/CLionProjects/RubicksCube/GUI/Drawer.h
 

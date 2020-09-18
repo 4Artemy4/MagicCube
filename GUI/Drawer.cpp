@@ -9,6 +9,9 @@
 #include <SFML/Window.hpp>
 #include <iostream>
 
+#define KEY_PRESSED(x) else if (sf::Keyboard::isKeyPressed(sf::Keyboard::x)) { window.draw(commandField);commandLine(((#x)[0]), window);}
+#define KEY_PRESSED_NUM(x) else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num##x)) { window.draw(commandField);commandLine(((#x)[0]), window);}
+
 Drawer::Drawer(Cube cb) : cube(cb) {}
 
 void Drawer::mainWindow() {
@@ -56,63 +59,22 @@ void Drawer::mainWindow() {
                     window.draw(commandField);
                     commandLine('V', window);
                 }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
-                    window.draw(commandField);
-                    commandLine('H', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
-                    window.draw(commandField);
-                    commandLine('P', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num0)) {
-                    window.draw(commandField);
-                    commandLine('0', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
-                    window.draw(commandField);
-                    commandLine('1', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)) {
-                    window.draw(commandField);
-                    commandLine('2', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) {
-                    window.draw(commandField);
-                    commandLine('3', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num4)) {
-                    window.draw(commandField);
-                    commandLine('4', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num5)) {
-                    window.draw(commandField);
-                    commandLine('5', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num6)) {
-                    window.draw(commandField);
-                    commandLine('6', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num7)) {
-                    window.draw(commandField);
-                    commandLine('7', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num8)) {
-                    window.draw(commandField);
-                    commandLine('8', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num9)) {
-                    window.draw(commandField);
-                    commandLine('9', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Quote)) {
-                    window.draw(commandField);
-                    commandLine('\'', window);
-                }
+                KEY_PRESSED(H)
+                KEY_PRESSED(P)
+                KEY_PRESSED_NUM(0)
+                KEY_PRESSED_NUM(1)
+                KEY_PRESSED_NUM(2)
+                KEY_PRESSED_NUM(3)
+                KEY_PRESSED_NUM(4)
+                KEY_PRESSED_NUM(5)
+                KEY_PRESSED_NUM(6)
+                KEY_PRESSED_NUM(7)
+                KEY_PRESSED_NUM(8)
+                KEY_PRESSED_NUM(9)
                 else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Backspace)) {
                     window.draw(commandField);
                     commandLine('\b', window);
-                }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+                } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
                     enterCommand();
                     updateCube(window);
                 }
@@ -124,6 +86,7 @@ void Drawer::mainWindow() {
                     window.draw(commandField);
                     CommandLine.setString(mashButton());
                     commandLine('\b', window);
+                    enterCommand();
                 }
                 if (solve.isPressed(sf::Mouse::getPosition(window))) {
                     window.draw(commandField);

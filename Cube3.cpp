@@ -1,7 +1,7 @@
 #include <string>
 #include "Cube3.h"
 
-#define COMMAND(x)case '\''x'\''  : { for (int j = 0; j < times; ++j) {x(isInverse);}break;}
+#define COMMAND(x)case ((#x)[0]) : { for (int j = 0; j < times; ++j) {x(isInverse);}break;}
 
 Cube3::Cube3(): Cube(3){}
 
@@ -18,42 +18,12 @@ bool Cube3::command(const std::string &commands){
             }
             if (commands[i + 1] == '\'') isInverse = true;
             switch (commands[i]) {
-                case 'F': {
-                    for (int j = 0; j < times; ++j) {
-                        F(isInverse);
-                    }
-                    break;
-                }
-                case 'B': {
-                    for (int j = 0; j < times; ++j) {
-                        B(isInverse);
-                    }
-                    break;
-                }
-                case 'L': {
-                    for (int j = 0; j < times; ++j) {
-                        L(isInverse);
-                    }
-                    break;
-                }
-                case 'R': {
-                    for (int j = 0; j < times; ++j) {
-                        R(isInverse);
-                    }
-                    break;
-                }
-                case 'U': {
-                    for (int j = 0; j < times; ++j) {
-                        U(isInverse);
-                    }
-                    break;
-                }
-                case 'D': {
-                    for (int j = 0; j < times; ++j) {
-                        D(isInverse);
-                    }
-                    break;
-                }
+                COMMAND(F)
+                COMMAND(B)
+                COMMAND(L)
+                COMMAND(R)
+                COMMAND(U)
+                COMMAND(D)
                 default:
                     return false;
             }

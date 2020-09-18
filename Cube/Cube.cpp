@@ -5,9 +5,10 @@
 #include <fstream>
 #include "Cube.h"
 
-#define  verticalRotation 'V'
-#define horizontalRotation 'H'
-#define frontRotation 'P'
+#define verticalRotationCommand 'V'
+#define horizontalRotationCommand 'H'
+#define frontRotationCommand 'P'
+
 char Cube::colors[6] = {'W', 'Y', 'R', 'O', 'B', 'G'};
 
 Cube::Cube(int n) {
@@ -30,13 +31,11 @@ void Cube::rotateLayerVertically(bool isInverse, int layer) {
 
 void Cube::rotateLayerHorizontally(bool isInverse, int layer) {
     if (size % 2 == 1 && layer == size / 2) return;
-
     if (isInverse) {
         rotateHorizontalInverse(layer);
     } else {
         rotateHorizontal(layer);
     }
-
     if (layer == 0) rotateSide(upColor, isInverse);
     else if (layer == size - 1)rotateSide(downColor, !isInverse);
 }
@@ -56,7 +55,7 @@ void Cube::rotateFrontLayer(bool isInverse, int layer) {
 
 void Cube::rotateSide(short side, bool isInverse) {
     short **original = nullptr;
-    initMatrix(original, side);
+    original = initMatrix(original, side);
     if (isInverse) {
         for (int i = 0; i < size; ++i) {
             for (int j = 0; j < size; ++j) {
@@ -108,31 +107,30 @@ std::istream &operator>>(std::istream &is, Cube &cube) {
 }
 
 bool Cube::command(const std::string &commands) {
-    bool isInverse;
     int layerNum;
     for (int i = 0; i < commands.size(); ++i) {
-        if (commands[i] == verticalRotation || commands[i] == horizontalRotation || commands[i] == frontRotation) {
-            isInverse = commands[i + 1] == '\'';
+        if (commands[i] == verticalRotationCommand || commands[i] == horizontalRotationCommand ||
+            commands[i] == frontRotationCommand) {
             int j = i + 1;
-            if (isInverse) j++;
-            layerNum = stringToInt(commands, j);
-
+            if (j < commands.length() && commands[j] != ' ') layerNum = stringToInt(commands, j);
+            else layerNum = 0;
             switch (commands[i]) {
-                case verticalRotation: {
-                    addVerticalRotationCommand(isInverse, layerNum);
+                case verticalRotationCommand: {
+                    addVerticalRotationCommand(false, layerNum);
                     break;
                 }
-                case horizontalRotation: {
-                    addHorizontalRotationCommand(isInverse, layerNum);
+                case horizontalRotationCommand: {
+                    addHorizontalRotationCommand(false, layerNum);
                     break;
                 }
-                case frontRotation: {
-                    addFrontRotationCommand(isInverse, layerNum);
+                case frontRotationCommand: {
+                    addFrontRotationCommand(false, layerNum);
                     break;
                 }
                 default:
                     return false;
             }
+            while (commands[i] != ' ' && i < commands.size()) i++;
         }
     }
     return true;
@@ -148,17 +146,17 @@ std::string Cube::rand() {
         switch (std::rand() % 3) {
             case 0: {
                 rotateLayerVertically(false, layer);
-                result += verticalRotation + std::to_string(layer);
+                result += verticalRotationCommand + std::to_string(layer);
                 break;
             }
             case 1: {
                 rotateLayerHorizontally(false, std::rand() % size);
-                result += horizontalRotation + std::to_string(layer);
+                result += horizontalRotationCommand + std::to_string(layer);
                 break;
             }
             case 2: {
                 rotateFrontLayer(false, std::rand() % size);
-                result += frontRotation + std::to_string(layer);
+                result += frontRotationCommand + std::to_string(layer);
                 break;
             }
         }
@@ -210,10 +208,11 @@ void Cube::solve() {
 }
 
 bool Cube::operator==(const Cube &rhs) const {
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 6; ++i) {
         for (int j = 0; j < size; ++j) {
             for (int k = 0; k < size; ++k) {
-                if (sides[i].matrix[i][j] != rhs.sides[i].matrix[i][j]) return false;
+                if (sides[i].matrix[j][k] != rhs.sides[i].matrix[j][k])
+                    return false;
             }
         }
     }
@@ -297,7 +296,7 @@ void Cube::deleteMatrix(short **matrix) const {
     delete[] matrix;
 }
 
-void Cube::initMatrix(short **matrix, short side) {
+short **Cube::initMatrix(short **matrix, short side) {
     matrix = new short *[size];
     for (int k = 0; k < size; ++k) {
         matrix[k] = new short[size];
@@ -305,26 +304,27 @@ void Cube::initMatrix(short **matrix, short side) {
             matrix[k][i] = sides[side].matrix[k][i];
         }
     }
+    return matrix;
 }
 
 void Cube::addVerticalRotationCommand(bool isInverse, int layerNum) {
     std::string result;
     rotateLayerVertically(isInverse, layerNum);
-    rotations += verticalRotation;
+    rotations += verticalRotationCommand;
     if (isInverse) rotations += '\'';
     rotations += std::to_string(layerNum);
 }
 
 void Cube::addHorizontalRotationCommand(bool isInverse, int layerNum) {
     rotateLayerHorizontally(isInverse, layerNum);
-    rotations += horizontalRotation;
+    rotations += horizontalRotationCommand;
     if (isInverse) rotations += '\'';
     rotations += std::to_string(layerNum);
 }
 
 void Cube::addFrontRotationCommand(bool isInverse, int layerNum) {
     rotateFrontLayer(isInverse, layerNum);
-    rotations += frontRotation;
+    rotations += frontRotationCommand;
     if (isInverse) rotations += '\'';
     rotations += std::to_string(layerNum);
 }
@@ -339,3 +339,89 @@ int Cube::stringToInt(const std::string &commands, int j) {
     sscanf(layerNumber.c_str(), "%d", &result);
     return result;
 }
+
+bool Cube::testVerticalRotation() {
+    Cube correct(3);
+    Cube test(3);
+    test.rotateLayerVertically(true, 0);
+
+    short temp[3];
+    temp[0] = correct.sides[correct.currentColor].matrix[0][0];
+    temp[1] = correct.sides[correct.currentColor].matrix[1][0];
+    temp[2] = correct.sides[correct.currentColor].matrix[2][0];
+
+    correct.sides[correct.currentColor].matrix[0][0] = correct.sides[correct.downColor].matrix[0][0];
+    correct.sides[correct.currentColor].matrix[1][0] = correct.sides[correct.downColor].matrix[1][0];
+    correct.sides[correct.currentColor].matrix[2][0] = correct.sides[correct.downColor].matrix[2][0];
+
+    correct.sides[correct.downColor].matrix[0][0] = correct.sides[correct.backwardColor].matrix[0][0];
+    correct.sides[correct.downColor].matrix[1][0] = correct.sides[correct.backwardColor].matrix[1][0];
+    correct.sides[correct.downColor].matrix[2][0] = correct.sides[correct.backwardColor].matrix[2][0];
+
+    correct.sides[correct.backwardColor].matrix[0][0] = correct.sides[correct.upColor].matrix[0][0];
+    correct.sides[correct.backwardColor].matrix[1][0] = correct.sides[correct.upColor].matrix[1][0];
+    correct.sides[correct.backwardColor].matrix[2][0] = correct.sides[correct.upColor].matrix[2][0];
+
+    correct.sides[correct.upColor].matrix[0][0] = temp[0];
+    correct.sides[correct.upColor].matrix[1][0] = temp[1];
+    correct.sides[correct.upColor].matrix[2][0] = temp[2];
+    return correct == test;
+}
+
+bool Cube::testHorizontalRotation() {
+    Cube correct(3);
+    Cube test(3);
+    test.rotateLayerHorizontally(false, 0);
+
+    short temp[3];
+    temp[0] = correct.sides[correct.currentColor].matrix[0][0];
+    temp[1] = correct.sides[correct.currentColor].matrix[0][1];
+    temp[2] = correct.sides[correct.currentColor].matrix[0][2];
+
+    correct.sides[correct.currentColor].matrix[0][0] = correct.sides[correct.rightColor].matrix[0][0];
+    correct.sides[correct.currentColor].matrix[0][1] = correct.sides[correct.rightColor].matrix[0][1];
+    correct.sides[correct.currentColor].matrix[0][2] = correct.sides[correct.rightColor].matrix[0][2];
+
+    correct.sides[correct.rightColor].matrix[0][0] = correct.sides[correct.backwardColor].matrix[0][0];
+    correct.sides[correct.rightColor].matrix[0][1] = correct.sides[correct.backwardColor].matrix[0][1];
+    correct.sides[correct.rightColor].matrix[0][2] = correct.sides[correct.backwardColor].matrix[0][2];
+
+    correct.sides[correct.backwardColor].matrix[0][0] = correct.sides[correct.leftColor].matrix[0][0];
+    correct.sides[correct.backwardColor].matrix[0][1] = correct.sides[correct.leftColor].matrix[0][1];
+    correct.sides[correct.backwardColor].matrix[0][2] = correct.sides[correct.leftColor].matrix[0][2];
+
+    correct.sides[correct.leftColor].matrix[0][0] = temp[0];
+    correct.sides[correct.leftColor].matrix[0][1] = temp[1];
+    correct.sides[correct.leftColor].matrix[0][2] = temp[2];
+    return correct == test;
+}
+
+bool Cube::testFrontRotation() {
+    Cube correct(3);
+    Cube test(3);
+    test.rotateLayerHorizontally(false, 0);
+
+    short temp[3];
+    temp[0] = correct.sides[correct.currentColor].matrix[0][0];
+    temp[1] = correct.sides[correct.currentColor].matrix[0][1];
+    temp[2] = correct.sides[correct.currentColor].matrix[0][2];
+
+    correct.sides[correct.currentColor].matrix[0][0] = correct.sides[correct.rightColor].matrix[0][0];
+    correct.sides[correct.currentColor].matrix[0][1] = correct.sides[correct.rightColor].matrix[0][1];
+    correct.sides[correct.currentColor].matrix[0][2] = correct.sides[correct.rightColor].matrix[0][2];
+
+    correct.sides[correct.rightColor].matrix[0][0] = correct.sides[correct.backwardColor].matrix[0][0];
+    correct.sides[correct.rightColor].matrix[0][1] = correct.sides[correct.backwardColor].matrix[0][1];
+    correct.sides[correct.rightColor].matrix[0][2] = correct.sides[correct.backwardColor].matrix[0][2];
+
+    correct.sides[correct.backwardColor].matrix[0][0] = correct.sides[correct.leftColor].matrix[0][0];
+    correct.sides[correct.backwardColor].matrix[0][1] = correct.sides[correct.leftColor].matrix[0][1];
+    correct.sides[correct.backwardColor].matrix[0][2] = correct.sides[correct.leftColor].matrix[0][2];
+
+    correct.sides[correct.leftColor].matrix[0][0] = temp[0];
+    correct.sides[correct.leftColor].matrix[0][1] = temp[1];
+    correct.sides[correct.leftColor].matrix[0][2] = temp[2];
+    return true;
+}
+
+

@@ -9,30 +9,44 @@
 #include <ostream>
 #include "Side.h"
 
+///\brief N-cube
 class Cube {
 private:
+
+    // rotate one vertical layer (clockwise)
     void rotateVertical(int layer);
 
+    // rotate one vertical layer (anticlockwise)
     void rotateVerticalInverse(int layer);
 
+    // rotate one horizontal layer (clockwise)
     void rotateHorizontal(int layer);
 
+    // rotate one horizontal layer (anticlockwise)
     void rotateHorizontalInverse(int layer);
 
+    // rotate one of front layers (clockwise)
     void rotateFront(int layer);
 
+    // rotate one of front layers (anticlockwise)
     void rotateFrontInverse(int layer);
 
-    void initMatrix(short **matrix, short side);
+    // initializer for matrix
+    short ** initMatrix(short **matrix, short side);
 
+    // delete matrix
     void deleteMatrix(short **matrix) const;
 
+    // add 'V' command to the list of the last commands
     void addVerticalRotationCommand(bool isInverse, int layerNum);
 
+    // add 'H' command to the list of the last commands
     void addHorizontalRotationCommand(bool isInverse, int layerNum);
 
+    // add 'F' command to the list of the last commands
     void addFrontRotationCommand(bool isInverse, int layerNum);
 
+    // string to int converter
     static int stringToInt(const std::string &commands, int j);
 
 protected:
@@ -103,6 +117,10 @@ public:
     ///\param filename
     void load(const std::string &filename);
 
+    ///\brief Solve Cube
+    ///\details Clearing rotation, recolor sides
+    void solve();
+
     ///\brief Get Cube dimensions
     ///\return Dimensions
     int getSize() const;
@@ -117,15 +135,20 @@ public:
     ///\param j column
     short getColor(short sideColor, int i, int j) const;
 
-    ///\brief Solve Cube
-    ///\details Clearing rotation, recolor sides
-    void solve();
-
     ///\brief Equality operator
     bool operator==(const Cube &rhs) const;
 
     ///\brief Equality operator
     bool operator!=(const Cube &rhs) const;
+
+    ///\test vertical rotation
+    static bool testVerticalRotation();
+
+    ///\test horizontal rotation
+    static bool testHorizontalRotation();
+
+    ///\test front rotation
+    static bool testFrontRotation();
 
 };
 

@@ -15,6 +15,7 @@ private:
     Cube cube;              ///< Cube we work with
     sf::Font commandsFont;  ///< Font for CommandLine
     sf::Text CommandLine;   ///< Edit aria with commands
+
 public:
     Drawer(Cube cb);
 
