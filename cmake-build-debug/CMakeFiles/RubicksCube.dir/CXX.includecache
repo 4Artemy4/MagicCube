@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/art/CLionProjects/RubicksCube/Cube/Cube.cpp
+fstream
+-
+Cube.h
+/home/art/CLionProjects/RubicksCube/Cube/Cube.h
+
 /home/art/CLionProjects/RubicksCube/Cube/Cube.h
 ostream
 -
@@ -14,6 +20,22 @@ Side.h
 
 /home/art/CLionProjects/RubicksCube/Cube/Side.h
 
+/home/art/CLionProjects/RubicksCube/GUI/Button.cpp
+iostream
+-
+Button.h
+/home/art/CLionProjects/RubicksCube/GUI/Button.h
+
+/home/art/CLionProjects/RubicksCube/GUI/Button.h
+SFML/Graphics/RenderWindow.hpp
+-
+SFML/Graphics/RectangleShape.hpp
+-
+SFML/Graphics/Text.hpp
+-
+Drawer.h
+/home/art/CLionProjects/RubicksCube/GUI/Drawer.h
+
 /home/art/CLionProjects/RubicksCube/GUI/Drawer.h
 SFML/Graphics/RenderWindow.hpp
 -
@@ -21,10 +43,6 @@ SFML/Graphics/Text.hpp
 -
 ../Cube/Cube.h
 /home/art/CLionProjects/RubicksCube/Cube/Cube.h
-
-/home/art/CLionProjects/RubicksCube/main.cpp
-Cube/Cube.h
-/home/art/CLionProjects/RubicksCube/Cube/Cube.h
-GUI/Drawer.h
-/home/art/CLionProjects/RubicksCube/GUI/Drawer.h
+Button.h
+/home/art/CLionProjects/RubicksCube/GUI/Button.h
 

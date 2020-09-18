@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include "Button.h"
-#include "Drawer.h"
 
 Button::Button(sf::RenderWindow &window) : parent(window) {
     sf::Texture *buttonTexture = new sf::Texture();

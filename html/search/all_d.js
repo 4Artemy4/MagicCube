@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['r_117',['R',['../class_cube3.html#ae96324877a2d21ade9209a1754c9056b',1,'Cube3']]],
+  ['rand_118',['rand',['../class_cube.html#acf451c9e630ee569f1be807239620623',1,'Cube::rand()'],['../class_cube3.html#aed80e22b8b7fbb2a88bae57bf1553dba',1,'Cube3::rand()']]],
+  ['randomfloatinggenerator_119',['RandomFloatingGenerator',['../class_catch_1_1_generators_1_1_random_floating_generator.html',1,'Catch::Generators']]],
+  ['randomintegergenerator_120',['RandomIntegerGenerator',['../class_catch_1_1_generators_1_1_random_integer_generator.html',1,'Catch::Generators']]],
+  ['rangegenerator_121',['RangeGenerator',['../class_catch_1_1_generators_1_1_range_generator.html',1,'Catch::Generators']]],
+  ['regexmatcher_122',['RegexMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_regex_matcher.html',1,'Catch::Matchers::StdString']]],
+  ['registrarfortagaliases_123',['RegistrarForTagAliases',['../struct_catch_1_1_registrar_for_tag_aliases.html',1,'Catch']]],
+  ['repeatgenerator_124',['RepeatGenerator',['../class_catch_1_1_generators_1_1_repeat_generator.html',1,'Catch::Generators']]],
+  ['resultdisposition_125',['ResultDisposition',['../struct_catch_1_1_result_disposition.html',1,'Catch']]],
+  ['resultwas_126',['ResultWas',['../struct_catch_1_1_result_was.html',1,'Catch']]],
+  ['reusablestringstream_127',['ReusableStringStream',['../class_catch_1_1_reusable_string_stream.html',1,'Catch']]],
+  ['rotatefrontlayer_128',['rotateFrontLayer',['../class_cube.html#a71bba8566ac2098910aa3639a4c69cd7',1,'Cube']]],
+  ['rotatelayerhorizontally_129',['rotateLayerHorizontally',['../class_cube.html#a509a46c5cdfe9c90575770d8bb9469a6',1,'Cube']]],
+  ['rotatelayervertically_130',['rotateLayerVertically',['../class_cube.html#a06c7f4dbb9d71cbcc069e4ada412fca8',1,'Cube']]],
+  ['rotations_131',['rotations',['../class_cube.html#a5ae653f7b0d7d64d4e3241b4d00d95fb',1,'Cube']]],
+  ['runtests_132',['RunTests',['../struct_catch_1_1_run_tests.html',1,'Catch']]]
+];

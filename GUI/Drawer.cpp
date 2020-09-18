@@ -18,10 +18,7 @@ void Drawer::mainWindow() {
     sf::RenderWindow window(sf::VideoMode(1200, 800), "Magic Cube");
     window.clear(sf::Color(192, 192, 192));
 
-    commandsFont.loadFromFile("GUI/CommandFont.ttf");
-    CommandLine.setFont(commandsFont);
-    CommandLine.setCharacterSize(30);
-    CommandLine.setFillColor(sf::Color::Black);
+    commandLineInit();
 
     Button mash(window);
     mash.setPosition(100, 100);
@@ -30,7 +27,6 @@ void Drawer::mainWindow() {
     Button solve(window);
     solve.setPosition(100, 400);
     solve.setSize(sf::Vector2f(300, 150));
-
 
     sf::RectangleShape commandField;
     commandField.setPosition(50, 700);
@@ -43,11 +39,10 @@ void Drawer::mainWindow() {
     mash.setText("Random mash");
     solve.setText("Solve");
 
-    sf::Event event;
+    sf::Event event{};
     window.display();
 
     while (window.isOpen()) {
-
         window.pollEvent(event);
         switch (event.type) {
             case sf::Event::Closed: {
@@ -81,25 +76,12 @@ void Drawer::mainWindow() {
                 window.display();
                 break;
             }
-            case sf::Event::MouseButtonPressed : {
-                if (mash.isPressed(sf::Mouse::getPosition(window))) {
-                    window.draw(commandField);
-                    CommandLine.setString(mashButton());
-                    commandLine('\b', window);
-                    enterCommand();
-                }
-                if (solve.isPressed(sf::Mouse::getPosition(window))) {
-                    window.draw(commandField);
-                    solveButton();
-                }
-                updateCube(window);
-                window.display();
-                sf::sleep(sf::milliseconds(10));
+            case sf::Event::MouseButtonPressed: {
+                onMouseClick(window, mash, solve, commandField);
                 break;
             }
         }
     }
-
 }
 
 void Drawer::updateCube(sf::RenderWindow &window) {
@@ -168,4 +150,27 @@ void Drawer::commandLine(char command, sf::RenderWindow &window) {
 void Drawer::enterCommand() {
     cube.solve();
     cube.command(CommandLine.getString());
+}
+
+void Drawer::commandLineInit() {
+    commandsFont.loadFromFile("GUI/CommandFont.ttf");
+    CommandLine.setFont(commandsFont);
+    CommandLine.setCharacterSize(30);
+    CommandLine.setFillColor(sf::Color::Black);
+}
+
+void Drawer::onMouseClick(sf::RenderWindow &window, Button &mash, Button &solve, sf::RectangleShape &commandField) {
+    if (mash.isPressed(sf::Mouse::getPosition(window))) {
+        window.draw(commandField);
+        CommandLine.setString(mashButton());
+        commandLine('\b', window);
+        enterCommand();
+    }
+    if (solve.isPressed(sf::Mouse::getPosition(window))) {
+        window.draw(commandField);
+        solveButton();
+    }
+    updateCube(window);
+    window.display();
+    sf::sleep(sf::milliseconds(10));
 }

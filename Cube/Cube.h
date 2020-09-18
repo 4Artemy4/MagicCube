@@ -10,6 +10,31 @@
 #include "Side.h"
 
 ///\brief N-cube
+///\details
+/// Magic Cube is consists of 6 sides in different colors:\n
+/// White
+/// Yellow
+/// Red
+/// Orange
+/// Blue
+/// Green
+/// Each side is consists of 9 elements (same colors as the sides)\n
+/// \n
+/// Rules:
+/// User can rotate all layers: vertical, horizontal, front
+/// \warning if size of cube is an odd number, user can't rotate central layer (of all the sides),
+/// but can give the command (it's will be ignored)\n
+/// \n
+/// Commands
+/// User can give the command in format: %command|isInverse|layer% \n
+/// Available commands: \n
+/// V - rotate one of the vertical layers \n
+/// H - rotate one of the horizontal layers \n
+/// P - rotate one of the layers in the frontal plane \n
+/// \example
+/// V - rotate the zero layer vertically (is equal to V0) \n
+/// P2 - rotate the second layer in the frontal plane
+/// H'2 - rotate the second layer in the frontal plane (anticlockwise)
 class Cube {
 private:
 
@@ -130,9 +155,9 @@ public:
     const std::string &getRotations() const;
 
     ///\brief Getter for Cube elements color
-    ///\param sideColor Source of information
-    ///\param i row
-    ///\param j column
+    ///\param sideColor Color code of cube side [0, 5]
+    ///\param i row number [0, size)
+    ///\param j column number [0, size)
     short getColor(short sideColor, int i, int j) const;
 
     ///\brief Equality operator
@@ -149,6 +174,12 @@ public:
 
     ///\test front rotation
     static bool testFrontRotation();
+
+    ///\test loading from file
+    static bool testLoadingFromFile();
+
+    ///\test cube solver
+    static bool testSolver();
 
 };
 

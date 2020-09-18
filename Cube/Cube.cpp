@@ -114,21 +114,24 @@ bool Cube::command(const std::string &commands) {
             int j = i + 1;
             if (j < commands.length() && commands[j] != ' ') layerNum = stringToInt(commands, j);
             else layerNum = 0;
-            switch (commands[i]) {
-                case verticalRotationCommand: {
-                    addVerticalRotationCommand(false, layerNum);
-                    break;
+
+            if (layerNum<size) {
+                switch (commands[i]) {
+                    case verticalRotationCommand: {
+                        addVerticalRotationCommand(false, layerNum);
+                        break;
+                    }
+                    case horizontalRotationCommand: {
+                        addHorizontalRotationCommand(false, layerNum);
+                        break;
+                    }
+                    case frontRotationCommand: {
+                        addFrontRotationCommand(false, layerNum);
+                        break;
+                    }
+                    default:
+                        return false;
                 }
-                case horizontalRotationCommand: {
-                    addHorizontalRotationCommand(false, layerNum);
-                    break;
-                }
-                case frontRotationCommand: {
-                    addFrontRotationCommand(false, layerNum);
-                    break;
-                }
-                default:
-                    return false;
             }
             while (commands[i] != ' ' && i < commands.size()) i++;
         }
@@ -422,6 +425,25 @@ bool Cube::testFrontRotation() {
     correct.sides[correct.leftColor].matrix[0][1] = temp[1];
     correct.sides[correct.leftColor].matrix[0][2] = temp[2];
     return true;
+}
+
+bool Cube::testLoadingFromFile() {
+    Cube correct(3);
+    Cube test(3);
+    correct.command("V H P");
+    test.load("Tests/test1");
+    return correct==test;
+}
+
+bool Cube::testSolver() {
+    Cube correct(3);
+    Cube testSolved(3);
+    Cube testRand(3);
+    testSolved.solve();
+
+    testRand.rand();
+    testRand.solve();
+    return correct==testSolved && correct == testRand;
 }
 
 

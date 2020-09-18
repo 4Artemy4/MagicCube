@@ -9,6 +9,9 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Text.hpp>
 #include "../Cube/Cube.h"
+#include "Button.h"
+
+class Button;
 
 class Drawer {
 private:
@@ -16,6 +19,9 @@ private:
     sf::Font commandsFont;  ///< Font for CommandLine
     sf::Text CommandLine;   ///< Edit aria with commands
 
+    void commandLineInit();
+
+    void onMouseClick(sf::RenderWindow &window, Button &mash, Button &solve, sf::RectangleShape &commandField);
 public:
     Drawer(Cube cb);
 

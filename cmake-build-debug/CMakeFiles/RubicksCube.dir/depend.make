@@ -27,6 +27,7 @@ CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o: ../GUI/Drawer.h
 
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../Cube/Cube.h
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../Cube/Side.h
+CMakeFiles/RubicksCube.dir/main.cpp.o: ../GUI/Button.h
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../GUI/Drawer.h
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../main.cpp
 
