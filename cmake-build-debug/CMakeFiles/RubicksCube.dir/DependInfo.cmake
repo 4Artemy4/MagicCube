@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/art/University/PPvIS/laba1/RubicksCube/Cube3.cpp" "/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/Cube3.cpp.o"
   "/home/art/University/PPvIS/laba1/RubicksCube/GUI/Button.cpp" "/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o"
   "/home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.cpp" "/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o"
-  "/home/art/University/PPvIS/laba1/RubicksCube/Tests/tests.cpp" "/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o"
   "/home/art/University/PPvIS/laba1/RubicksCube/main.cpp" "/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

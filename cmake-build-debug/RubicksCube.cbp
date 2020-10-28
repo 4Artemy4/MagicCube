@@ -112,9 +112,6 @@
 		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.h">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/Tests/tests.cpp">
-			<Option target="RubicksCube"/>
-		</Unit>
 		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/main.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>

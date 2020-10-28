@@ -25,14 +25,9 @@ CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o
  /home/art/University/PPvIS/laba1/RubicksCube/GUI/Button.h
  /home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.cpp
  /home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.h
-CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o
- /home/art/University/PPvIS/laba1/RubicksCube/Cube/Cube.h
- /home/art/University/PPvIS/laba1/RubicksCube/Cube/Side.h
- /home/art/University/PPvIS/laba1/RubicksCube/Tests/tests.cpp
- /home/art/University/PPvIS/laba1/RubicksCube/catch.hpp
 CMakeFiles/RubicksCube.dir/main.cpp.o
  /home/art/University/PPvIS/laba1/RubicksCube/Cube/Cube.h
  /home/art/University/PPvIS/laba1/RubicksCube/Cube/Side.h
- /home/art/University/PPvIS/laba1/RubicksCube/Tests/tests.cpp
- /home/art/University/PPvIS/laba1/RubicksCube/catch.hpp
+ /home/art/University/PPvIS/laba1/RubicksCube/GUI/Button.h
+ /home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.h
  /home/art/University/PPvIS/laba1/RubicksCube/main.cpp

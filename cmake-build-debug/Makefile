@@ -278,33 +278,6 @@ GUI/Drawer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.s
 .PHONY : GUI/Drawer.cpp.s
 
-Tests/tests.o: Tests/tests.cpp.o
-
-.PHONY : Tests/tests.o
-
-# target to build an object file
-Tests/tests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o
-.PHONY : Tests/tests.cpp.o
-
-Tests/tests.i: Tests/tests.cpp.i
-
-.PHONY : Tests/tests.i
-
-# target to preprocess a source file
-Tests/tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/Tests/tests.cpp.i
-.PHONY : Tests/tests.cpp.i
-
-Tests/tests.s: Tests/tests.cpp.s
-
-.PHONY : Tests/tests.s
-
-# target to generate assembly for a file
-Tests/tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubicksCube.dir/build.make CMakeFiles/RubicksCube.dir/Tests/tests.cpp.s
-.PHONY : Tests/tests.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -356,9 +329,6 @@ help:
 	@echo "... GUI/Drawer.o"
 	@echo "... GUI/Drawer.i"
 	@echo "... GUI/Drawer.s"
-	@echo "... Tests/tests.o"
-	@echo "... Tests/tests.i"
-	@echo "... Tests/tests.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
