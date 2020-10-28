@@ -1,0 +1,156 @@
+\hypertarget{class_cube3}{}\doxysection{Cube3 Class Reference}
+\label{class_cube3}\index{Cube3@{Cube3}}
+Inheritance diagram for Cube3\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cube3}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cube3_aa73f2c275bbe3ef769c231bc82fc3ddd}\label{class_cube3_aa73f2c275bbe3ef769c231bc82fc3ddd}} 
+\mbox{\hyperlink{class_cube3_aa73f2c275bbe3ef769c231bc82fc3ddd}{Cube3}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cube3_a6264de0b33e7cea6a6eea81b34b92a14}\label{class_cube3_a6264de0b33e7cea6a6eea81b34b92a14}} 
+bool \mbox{\hyperlink{class_cube3_a6264de0b33e7cea6a6eea81b34b92a14}{command}} (const std\+::string \&commands) override
+\begin{DoxyCompactList}\small\item\em Command converter for 3x3 \mbox{\hyperlink{class_cube}{Cube}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube3_a8e0629a54be5c11bd97307b8fab0622d}{F}} (bool is\+Inverse)
+\begin{DoxyCompactList}\small\item\em Forward side rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube3_a172f6d590d2ac36c50d79089d948bb9e}{B}} (bool is\+Inverse)
+\begin{DoxyCompactList}\small\item\em Backward side rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube3_ae96324877a2d21ade9209a1754c9056b}{R}} (bool is\+Inverse)
+\begin{DoxyCompactList}\small\item\em Right side rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube3_a5df7bf65e7e3d5cfe702064d903c3d85}{L}} (bool is\+Inverse)
+\begin{DoxyCompactList}\small\item\em Left side rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube3_adf8b1f08dc974f80e3c00d6b46ea33b9}{U}} (bool is\+Inverse)
+\begin{DoxyCompactList}\small\item\em Up side rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube3_a24f60a4fb1dd7de42c6f4c051384cd76}{D}} (bool is\+Inverse)
+\begin{DoxyCompactList}\small\item\em Down side rotation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cube3_aed80e22b8b7fbb2a88bae57bf1553dba}\label{class_cube3_aed80e22b8b7fbb2a88bae57bf1553dba}} 
+std\+::string \mbox{\hyperlink{class_cube3_aed80e22b8b7fbb2a88bae57bf1553dba}{rand}} () override
+\begin{DoxyCompactList}\small\item\em Random commands for 3x3 \mbox{\hyperlink{class_cube}{Cube}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cube3_ab1aafbeed172fdaf2cbc2d66ab54e79a}\label{class_cube3_ab1aafbeed172fdaf2cbc2d66ab54e79a}} 
+std\+::istream \& \mbox{\hyperlink{class_cube3_ab1aafbeed172fdaf2cbc2d66ab54e79a}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_cube3}{Cube3}} \&cube)
+\begin{DoxyCompactList}\small\item\em Input stream for 3x3 \mbox{\hyperlink{class_cube}{Cube}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cube3_a172f6d590d2ac36c50d79089d948bb9e}\label{class_cube3_a172f6d590d2ac36c50d79089d948bb9e}} 
+\index{Cube3@{Cube3}!B@{B}}
+\index{B@{B}!Cube3@{Cube3}}
+\doxysubsubsection{\texorpdfstring{B()}{B()}}
+{\footnotesize\ttfamily void Cube3\+::B (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse }\end{DoxyParamCaption})}
+
+
+
+Backward side rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & -\/ rotation direction ~\newline
+true -\/ anticlockwise ~\newline
+false -\/ clockwise ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cube3_a24f60a4fb1dd7de42c6f4c051384cd76}\label{class_cube3_a24f60a4fb1dd7de42c6f4c051384cd76}} 
+\index{Cube3@{Cube3}!D@{D}}
+\index{D@{D}!Cube3@{Cube3}}
+\doxysubsubsection{\texorpdfstring{D()}{D()}}
+{\footnotesize\ttfamily void Cube3\+::D (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse }\end{DoxyParamCaption})}
+
+
+
+Down side rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & -\/ rotation direction ~\newline
+true -\/ anticlockwise ~\newline
+false -\/ clockwise ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cube3_a8e0629a54be5c11bd97307b8fab0622d}\label{class_cube3_a8e0629a54be5c11bd97307b8fab0622d}} 
+\index{Cube3@{Cube3}!F@{F}}
+\index{F@{F}!Cube3@{Cube3}}
+\doxysubsubsection{\texorpdfstring{F()}{F()}}
+{\footnotesize\ttfamily void Cube3\+::F (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse }\end{DoxyParamCaption})}
+
+
+
+Forward side rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & -\/ rotation direction ~\newline
+true -\/ anticlockwise ~\newline
+false -\/ clockwise ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cube3_a5df7bf65e7e3d5cfe702064d903c3d85}\label{class_cube3_a5df7bf65e7e3d5cfe702064d903c3d85}} 
+\index{Cube3@{Cube3}!L@{L}}
+\index{L@{L}!Cube3@{Cube3}}
+\doxysubsubsection{\texorpdfstring{L()}{L()}}
+{\footnotesize\ttfamily void Cube3\+::L (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse }\end{DoxyParamCaption})}
+
+
+
+Left side rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & -\/ rotation direction ~\newline
+true -\/ anticlockwise ~\newline
+false -\/ clockwise ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cube3_ae96324877a2d21ade9209a1754c9056b}\label{class_cube3_ae96324877a2d21ade9209a1754c9056b}} 
+\index{Cube3@{Cube3}!R@{R}}
+\index{R@{R}!Cube3@{Cube3}}
+\doxysubsubsection{\texorpdfstring{R()}{R()}}
+{\footnotesize\ttfamily void Cube3\+::R (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse }\end{DoxyParamCaption})}
+
+
+
+Right side rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & -\/ rotation direction ~\newline
+true -\/ anticlockwise ~\newline
+false -\/ clockwise ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cube3_adf8b1f08dc974f80e3c00d6b46ea33b9}\label{class_cube3_adf8b1f08dc974f80e3c00d6b46ea33b9}} 
+\index{Cube3@{Cube3}!U@{U}}
+\index{U@{U}!Cube3@{Cube3}}
+\doxysubsubsection{\texorpdfstring{U()}{U()}}
+{\footnotesize\ttfamily void Cube3\+::U (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse }\end{DoxyParamCaption})}
+
+
+
+Up side rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & -\/ rotation direction ~\newline
+true -\/ anticlockwise ~\newline
+false -\/ clockwise ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/Cube3.\+h\item 
+/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/Cube3.\+cpp\end{DoxyCompactItemize}

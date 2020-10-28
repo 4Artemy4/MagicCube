@@ -14,6 +14,7 @@ var class_cube =
     [ "rotateLayerHorizontally", "class_cube.html#a509a46c5cdfe9c90575770d8bb9469a6", null ],
     [ "rotateLayerVertically", "class_cube.html#a06c7f4dbb9d71cbcc069e4ada412fca8", null ],
     [ "rotateSide", "class_cube.html#a0109e7e1d479e3f7af1cad692ffee00c", null ],
+    [ "setColor", "class_cube.html#a47035370e258db784559ee0a9addce0e", null ],
     [ "solve", "class_cube.html#a8ad69c188b5bb564f130ff19f526cb95", null ],
     [ "operator<<", "class_cube.html#aef067ecef18e822670ba3cfd8dbac245", null ],
     [ "operator>>", "class_cube.html#a26a443783dc419803b51e4d158c3df8a", null ],

@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['operator_21_3d_110',['operator!=',['../class_cube.html#a145ed5b5af53d78532e39daf44ff1b1a',1,'Cube']]],
-  ['operator_3c_3c_111',['operator&lt;&lt;',['../class_cube.html#aef067ecef18e822670ba3cfd8dbac245',1,'Cube']]],
-  ['operator_3d_3d_112',['operator==',['../class_cube.html#a700682a9f6bc5328725c7781932c5195',1,'Cube']]],
-  ['operator_3e_3e_113',['operator&gt;&gt;',['../class_cube.html#a26a443783dc419803b51e4d158c3df8a',1,'Cube::operator&gt;&gt;()'],['../class_cube3.html#ab1aafbeed172fdaf2cbc2d66ab54e79a',1,'Cube3::operator&gt;&gt;()']]],
-  ['option_114',['Option',['../class_catch_1_1_option.html',1,'Catch']]]
+  ['setcolor_34',['setColor',['../class_cube.html#a47035370e258db784559ee0a9addce0e',1,'Cube']]],
+  ['settext_35',['setText',['../class_button.html#a728078be1fc77e019eadd4157be8aa7d',1,'Button']]],
+  ['side_36',['Side',['../class_side.html',1,'Side'],['../class_side.html#a46a74509f07ea7839797141241a103b0',1,'Side::Side(int size, short color)'],['../class_side.html#ab5243ac675fdf9af60c0cb1851a68499',1,'Side::Side()']]],
+  ['sides_37',['sides',['../class_cube.html#a6861e3660b9d8b6dbab9be2419558d80',1,'Cube']]],
+  ['size_38',['size',['../class_cube.html#a0b22d70154fa77b63777659a8751b799',1,'Cube::size()'],['../class_side.html#a8c403016917c357f4606848334cfe428',1,'Side::size()']]],
+  ['solve_39',['solve',['../class_cube.html#a8ad69c188b5bb564f130ff19f526cb95',1,'Cube']]],
+  ['solvebutton_40',['solveButton',['../class_drawer.html#a0ef8bbcf2273c12306d033e87c1403f5',1,'Drawer']]]
 ];

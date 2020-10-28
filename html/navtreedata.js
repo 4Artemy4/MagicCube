@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "Magic Cube", "index.html", [
-    [ "Test List", "test.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -46,9 +45,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"class_catch_1_1_test_case.html#a5456d03a90f75292835c158f3a3374a1",
-"struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of.html#a47afdd9e4c3354cef85adc3186097ae4"
+"_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

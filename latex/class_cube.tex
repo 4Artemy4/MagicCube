@@ -1,0 +1,409 @@
+\hypertarget{class_cube}{}\doxysection{Cube Class Reference}
+\label{class_cube}\index{Cube@{Cube}}
+Inheritance diagram for Cube\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cube}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cube_a05c713fa7316d3a02c7b8cf84e7d48fc}\label{class_cube_a05c713fa7316d3a02c7b8cf84e7d48fc}} 
+\mbox{\hyperlink{class_cube_a05c713fa7316d3a02c7b8cf84e7d48fc}{Cube}} (int n)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_cube_a6e7d1e2fc0dcca4ecf7b98a844b810a8}{command}} (const std\+::string \&commands)
+\begin{DoxyCompactList}\small\item\em Command for cube. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_cube_acf451c9e630ee569f1be807239620623}{rand}} ()
+\begin{DoxyCompactList}\small\item\em Random commands. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cube_a177515ccd4a1fca0f2ef20d36f0e426a}{check}} () const
+\begin{DoxyCompactList}\small\item\em Is \mbox{\hyperlink{class_cube}{Cube}} compiled? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_ac0314e073c5b247fc7383bac29e25c14}{load}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Load \mbox{\hyperlink{class_cube}{Cube}} from the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_a8ad69c188b5bb564f130ff19f526cb95}{solve}} ()
+\begin{DoxyCompactList}\small\item\em Solve \mbox{\hyperlink{class_cube}{Cube}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cube_aea51b3e5987c036055ce7a0ab44ff3c9}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get \mbox{\hyperlink{class_cube}{Cube}} dimensions. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_cube_a201bbe309c974c823c7e76e8b8ab9bfc}{get\+Rotations}} () const
+\begin{DoxyCompactList}\small\item\em Getter for last rotations list. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{class_cube_a15530c3cde632824393b0ac2d41ad3d2}{get\+Color}} (short side\+Color, int i, int j) const
+\begin{DoxyCompactList}\small\item\em Getter for \mbox{\hyperlink{class_cube}{Cube}} elements color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_a47035370e258db784559ee0a9addce0e}{set\+Color}} (short value, short side\+Color, int i, int j)
+\begin{DoxyCompactList}\small\item\em Setter for \mbox{\hyperlink{class_cube}{Cube}} elements color. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cube_a700682a9f6bc5328725c7781932c5195}\label{class_cube_a700682a9f6bc5328725c7781932c5195}} 
+bool \mbox{\hyperlink{class_cube_a700682a9f6bc5328725c7781932c5195}{operator==}} (const \mbox{\hyperlink{class_cube}{Cube}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cube_a145ed5b5af53d78532e39daf44ff1b1a}\label{class_cube_a145ed5b5af53d78532e39daf44ff1b1a}} 
+bool \mbox{\hyperlink{class_cube_a145ed5b5af53d78532e39daf44ff1b1a}{operator!=}} (const \mbox{\hyperlink{class_cube}{Cube}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_a06c7f4dbb9d71cbcc069e4ada412fca8}{rotate\+Layer\+Vertically}} (bool is\+Inverse, int layer)
+\begin{DoxyCompactList}\small\item\em Rotate layer vertically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_a509a46c5cdfe9c90575770d8bb9469a6}{rotate\+Layer\+Horizontally}} (bool is\+Inverse, int layer)
+\begin{DoxyCompactList}\small\item\em Rotate layer horizontally. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cube_a71bba8566ac2098910aa3639a4c69cd7}{rotate\+Front\+Layer}} (bool is\+Inverse, int layer)
+\begin{DoxyCompactList}\small\item\em Rotate Front layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cube_a0109e7e1d479e3f7af1cad692ffee00c}\label{class_cube_a0109e7e1d479e3f7af1cad692ffee00c}} 
+void {\bfseries rotate\+Side} (short side, bool is\+Inverse)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char \mbox{\hyperlink{class_cube_a98afa19170942cfa55e3e96cfe451e05}{convert\+Code\+To\+Color}} (short color\+Code)
+\begin{DoxyCompactList}\small\item\em Convert color code to color char. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cube_a6861e3660b9d8b6dbab9be2419558d80}\label{class_cube_a6861e3660b9d8b6dbab9be2419558d80}} 
+\mbox{\hyperlink{class_side}{Side}} \mbox{\hyperlink{class_cube_a6861e3660b9d8b6dbab9be2419558d80}{sides}} \mbox{[}6\mbox{]}
+\begin{DoxyCompactList}\small\item\em Sides of the \mbox{\hyperlink{class_cube}{Cube}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cube_a0b22d70154fa77b63777659a8751b799}\label{class_cube_a0b22d70154fa77b63777659a8751b799}} 
+int \mbox{\hyperlink{class_cube_a0b22d70154fa77b63777659a8751b799}{size}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_cube}{Cube}} dimensions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cube_a82580c50647b8a0a94ba1eb877f3725a}\label{class_cube_a82580c50647b8a0a94ba1eb877f3725a}} 
+const short {\bfseries current\+Color} = 0
+\item 
+\mbox{\Hypertarget{class_cube_ab013a383aa820cd2cb7fdafe2ad8786c}\label{class_cube_ab013a383aa820cd2cb7fdafe2ad8786c}} 
+const short {\bfseries backward\+Color} = 1
+\item 
+\mbox{\Hypertarget{class_cube_ab9050fd58763a76095e335811d18271d}\label{class_cube_ab9050fd58763a76095e335811d18271d}} 
+const short {\bfseries up\+Color} = 2
+\item 
+\mbox{\Hypertarget{class_cube_aaea13b731244480e6326a0579f06bd43}\label{class_cube_aaea13b731244480e6326a0579f06bd43}} 
+const short {\bfseries down\+Color} = 3
+\item 
+\mbox{\Hypertarget{class_cube_ad6d86e2c039eff5959bfafdfa213943e}\label{class_cube_ad6d86e2c039eff5959bfafdfa213943e}} 
+const short {\bfseries left\+Color} = 4
+\item 
+\mbox{\Hypertarget{class_cube_a650c0f43c0def824e42f6ea7f9e78f67}\label{class_cube_a650c0f43c0def824e42f6ea7f9e78f67}} 
+const short {\bfseries right\+Color} = 5
+\item 
+\mbox{\Hypertarget{class_cube_a5ae653f7b0d7d64d4e3241b4d00d95fb}\label{class_cube_a5ae653f7b0d7d64d4e3241b4d00d95fb}} 
+std\+::string \mbox{\hyperlink{class_cube_a5ae653f7b0d7d64d4e3241b4d00d95fb}{rotations}}
+\begin{DoxyCompactList}\small\item\em List of the last commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cube_af74e6bd7d6eb83c5ec72ebafca814fdf}\label{class_cube_af74e6bd7d6eb83c5ec72ebafca814fdf}} 
+static char \mbox{\hyperlink{class_cube_af74e6bd7d6eb83c5ec72ebafca814fdf}{colors}} \mbox{[}6\mbox{]} = \{\textquotesingle{}W\textquotesingle{}, \textquotesingle{}Y\textquotesingle{}, \textquotesingle{}R\textquotesingle{}, \textquotesingle{}O\textquotesingle{}, \textquotesingle{}B\textquotesingle{}, \textquotesingle{}G\textquotesingle{}\}
+\begin{DoxyCompactList}\small\item\em Array for translating color\+Code to Color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_cube_aef067ecef18e822670ba3cfd8dbac245}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_cube}{Cube}} \&cube)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_cube_a26a443783dc419803b51e4d158c3df8a}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_cube}{Cube}} \&cube)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cube_a177515ccd4a1fca0f2ef20d36f0e426a}\label{class_cube_a177515ccd4a1fca0f2ef20d36f0e426a}} 
+\index{Cube@{Cube}!check@{check}}
+\index{check@{check}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily bool Cube\+::check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Is \mbox{\hyperlink{class_cube}{Cube}} compiled? 
+
+\begin{DoxyReturn}{Returns}
+true -\/ is compiled 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a6e7d1e2fc0dcca4ecf7b98a844b810a8}\label{class_cube_a6e7d1e2fc0dcca4ecf7b98a844b810a8}} 
+\index{Cube@{Cube}!command@{command}}
+\index{command@{command}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{command()}{command()}}
+{\footnotesize\ttfamily bool Cube\+::command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{commands }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Command for cube. 
+
+Convert commands in the \char`\"{}\+Cube rotation language\char`\"{} into the program commands 
+\begin{DoxyParams}{Parameters}
+{\em commands} & string with commands \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if all commands are correct 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_cube3_a6264de0b33e7cea6a6eea81b34b92a14}{Cube3}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a98afa19170942cfa55e3e96cfe451e05}\label{class_cube_a98afa19170942cfa55e3e96cfe451e05}} 
+\index{Cube@{Cube}!convertCodeToColor@{convertCodeToColor}}
+\index{convertCodeToColor@{convertCodeToColor}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{convertCodeToColor()}{convertCodeToColor()}}
+{\footnotesize\ttfamily char Cube\+::convert\+Code\+To\+Color (\begin{DoxyParamCaption}\item[{short}]{color\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Convert color code to color char. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color\+Code} & \+: ~\newline
+ 0 -\/ White ~\newline
+ 1 -\/ Yellow ~\newline
+ 2 -\/ Red ~\newline
+ 3 -\/ Orange ~\newline
+ 4 -\/ Blue ~\newline
+ 5 -\/ Green ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a15530c3cde632824393b0ac2d41ad3d2}\label{class_cube_a15530c3cde632824393b0ac2d41ad3d2}} 
+\index{Cube@{Cube}!getColor@{getColor}}
+\index{getColor@{getColor}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily short Cube\+::get\+Color (\begin{DoxyParamCaption}\item[{short}]{side\+Color,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption}) const}
+
+
+
+Getter for \mbox{\hyperlink{class_cube}{Cube}} elements color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em side\+Color} & Color code of cube side \mbox{[}0, 5\mbox{]} \\
+\hline
+{\em i} & row number \mbox{[}0, size) \\
+\hline
+{\em j} & column number \mbox{[}0, size) \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a201bbe309c974c823c7e76e8b8ab9bfc}\label{class_cube_a201bbe309c974c823c7e76e8b8ab9bfc}} 
+\index{Cube@{Cube}!getRotations@{getRotations}}
+\index{getRotations@{getRotations}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{getRotations()}{getRotations()}}
+{\footnotesize\ttfamily const std\+::string \& Cube\+::get\+Rotations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for last rotations list. 
+
+\begin{DoxyReturn}{Returns}
+String in \char`\"{}\+Cube rotation language\char`\"{} 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_aea51b3e5987c036055ce7a0ab44ff3c9}\label{class_cube_aea51b3e5987c036055ce7a0ab44ff3c9}} 
+\index{Cube@{Cube}!getSize@{getSize}}
+\index{getSize@{getSize}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Cube\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get \mbox{\hyperlink{class_cube}{Cube}} dimensions. 
+
+\begin{DoxyReturn}{Returns}
+Dimensions 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_ac0314e073c5b247fc7383bac29e25c14}\label{class_cube_ac0314e073c5b247fc7383bac29e25c14}} 
+\index{Cube@{Cube}!load@{load}}
+\index{load@{load}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Cube\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Load \mbox{\hyperlink{class_cube}{Cube}} from the file. 
+
+Load string in the \char`\"{}\+Cube rotation language\char`\"{} from the file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_acf451c9e630ee569f1be807239620623}\label{class_cube_acf451c9e630ee569f1be807239620623}} 
+\index{Cube@{Cube}!rand@{rand}}
+\index{rand@{rand}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{rand()}{rand()}}
+{\footnotesize\ttfamily std\+::string Cube\+::rand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Random commands. 
+
+\begin{DoxyReturn}{Returns}
+string with commands in the \char`\"{}\+Cube rotation language\char`\"{} 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_cube3_aed80e22b8b7fbb2a88bae57bf1553dba}{Cube3}}.
+
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a71bba8566ac2098910aa3639a4c69cd7}\label{class_cube_a71bba8566ac2098910aa3639a4c69cd7}} 
+\index{Cube@{Cube}!rotateFrontLayer@{rotateFrontLayer}}
+\index{rotateFrontLayer@{rotateFrontLayer}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{rotateFrontLayer()}{rotateFrontLayer()}}
+{\footnotesize\ttfamily void Cube\+::rotate\+Front\+Layer (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse,  }\item[{int}]{layer }\end{DoxyParamCaption})}
+
+
+
+Rotate Front layer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & If false -\/ clockwise rotation, true -\/ anticlockwise rotation \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a509a46c5cdfe9c90575770d8bb9469a6}\label{class_cube_a509a46c5cdfe9c90575770d8bb9469a6}} 
+\index{Cube@{Cube}!rotateLayerHorizontally@{rotateLayerHorizontally}}
+\index{rotateLayerHorizontally@{rotateLayerHorizontally}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{rotateLayerHorizontally()}{rotateLayerHorizontally()}}
+{\footnotesize\ttfamily void Cube\+::rotate\+Layer\+Horizontally (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse,  }\item[{int}]{layer }\end{DoxyParamCaption})}
+
+
+
+Rotate layer horizontally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & If false -\/ clockwise rotation, true -\/ anticlockwise rotation \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a06c7f4dbb9d71cbcc069e4ada412fca8}\label{class_cube_a06c7f4dbb9d71cbcc069e4ada412fca8}} 
+\index{Cube@{Cube}!rotateLayerVertically@{rotateLayerVertically}}
+\index{rotateLayerVertically@{rotateLayerVertically}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{rotateLayerVertically()}{rotateLayerVertically()}}
+{\footnotesize\ttfamily void Cube\+::rotate\+Layer\+Vertically (\begin{DoxyParamCaption}\item[{bool}]{is\+Inverse,  }\item[{int}]{layer }\end{DoxyParamCaption})}
+
+
+
+Rotate layer vertically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Inverse} & If false -\/ clockwise rotation, true -\/ anticlockwise rotation \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a47035370e258db784559ee0a9addce0e}\label{class_cube_a47035370e258db784559ee0a9addce0e}} 
+\index{Cube@{Cube}!setColor@{setColor}}
+\index{setColor@{setColor}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Cube\+::set\+Color (\begin{DoxyParamCaption}\item[{short}]{value,  }\item[{short}]{side\+Color,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+Setter for \mbox{\hyperlink{class_cube}{Cube}} elements color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em side\+Color} & Color code of cube side \mbox{[}0, 5\mbox{]} \\
+\hline
+{\em i} & row number \mbox{[}0, size) \\
+\hline
+{\em j} & column number \mbox{[}0, size) \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a8ad69c188b5bb564f130ff19f526cb95}\label{class_cube_a8ad69c188b5bb564f130ff19f526cb95}} 
+\index{Cube@{Cube}!solve@{solve}}
+\index{solve@{solve}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily void Cube\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Solve \mbox{\hyperlink{class_cube}{Cube}}. 
+
+Clearing rotation, recolor sides \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_cube_aef067ecef18e822670ba3cfd8dbac245}\label{class_cube_aef067ecef18e822670ba3cfd8dbac245}} 
+\index{Cube@{Cube}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_cube}{Cube}} \&}]{cube }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream \\
+\hline
+{\em cube} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+\mbox{\Hypertarget{class_cube_a26a443783dc419803b51e4d158c3df8a}\label{class_cube_a26a443783dc419803b51e4d158c3df8a}} 
+\index{Cube@{Cube}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Cube@{Cube}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_cube}{Cube}} \&}]{cube }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & output stream \\
+\hline
+{\em cube} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}}.\end{Desc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/Cube.\+h\item 
+/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/Cube.\+cpp\end{DoxyCompactItemize}

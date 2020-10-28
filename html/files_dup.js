@@ -1,4 +1,4 @@
 var files_dup =
 [
-    [ "CLionProjects", "dir_ed353eea8d78a173a119b387b77c750d.html", "dir_ed353eea8d78a173a119b387b77c750d" ]
+    [ "University", "dir_7a42b484a0e0f7c82b78a6ceac270680.html", "dir_7a42b484a0e0f7c82b78a6ceac270680" ]
 ];

@@ -1,0 +1,126 @@
+\hypertarget{_2home_2art_2_university_2_p_pv_i_s_2laba1_2_rubicks_cube_2_cube_2_cube_8h-example}{}\doxysection{/home/art/\+University/\+P\+Pv\+I\+S/laba1/\+Rubicks\+Cube/\+Cube/\+Cube.\+h}
+N-\/cube Magic \mbox{\hyperlink{class_cube}{Cube}} is consists of 6 sides in different colors\+:~\newline
+ White Yellow Red Orange Blue Green Each side is consists of 9 elements (same colors as the sides)~\newline
+ ~\newline
+ Rules\+: User can rotate all layers\+: vertical, horizontal, front \begin{DoxyWarning}{Warning}
+if size of cube is an odd number, user can\textquotesingle{}t rotate central layer (of all the sides), but can give the command (it\textquotesingle{}s will be ignored)~\newline
+ ~\newline
+ Commands User can give the command in format\+: command$\vert$is\+Inverse$\vert$layer\% ~\newline
+ Available commands\+: ~\newline
+ V -\/ rotate one of the vertical layers ~\newline
+ H -\/ rotate one of the horizontal layers ~\newline
+ P -\/ rotate one of the layers in the frontal plane ~\newline
+ V -\/ rotate the zero layer vertically (is equal to V0) ~\newline
+ P2 -\/ rotate the second layer in the frontal plane H\textquotesingle{}2 -\/ rotate the second layer in the frontal plane (anticlockwise)
+\end{DoxyWarning}
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{comment}{// Created by art on 9/3/20.}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#ifndef RUBICKSCUBE\_CUBE\_H}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define RUBICKSCUBE\_CUBE\_H}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}Side.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }\mbox{\hyperlink{class_cube}{Cube}} \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{class_cube_a05c713fa7316d3a02c7b8cf84e7d48fc}{Cube}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{friend} std::ostream \&\mbox{\hyperlink{class_cube_aef067ecef18e822670ba3cfd8dbac245}{operator<<}}(std::ostream \&os, \textcolor{keyword}{const} \mbox{\hyperlink{class_cube}{Cube}} \&cube);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{friend} std::istream \&\mbox{\hyperlink{class_cube_a26a443783dc419803b51e4d158c3df8a}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_cube}{Cube}} \&cube);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cube_a6e7d1e2fc0dcca4ecf7b98a844b810a8}{command}}(\textcolor{keyword}{const} std::string \&commands);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_cube_acf451c9e630ee569f1be807239620623}{rand}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cube_a177515ccd4a1fca0f2ef20d36f0e426a}{check}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cube_ac0314e073c5b247fc7383bac29e25c14}{load}}(\textcolor{keyword}{const} std::string \&filename);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cube_a8ad69c188b5bb564f130ff19f526cb95}{solve}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} \mbox{\hyperlink{class_cube_aea51b3e5987c036055ce7a0ab44ff3c9}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{class_cube_a201bbe309c974c823c7e76e8b8ab9bfc}{getRotations}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{short} \mbox{\hyperlink{class_cube_a15530c3cde632824393b0ac2d41ad3d2}{getColor}}(\textcolor{keywordtype}{short} sideColor, \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j) \textcolor{keyword}{const};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cube_a47035370e258db784559ee0a9addce0e}{setColor}}(\textcolor{keywordtype}{short} value, \textcolor{keywordtype}{short} sideColor, \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cube_a700682a9f6bc5328725c7781932c5195}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_cube}{Cube}} \&rhs) \textcolor{keyword}{const};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cube_a145ed5b5af53d78532e39daf44ff1b1a}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_cube}{Cube}} \&rhs) \textcolor{keyword}{const};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cube_a06c7f4dbb9d71cbcc069e4ada412fca8}{rotateLayerVertically}}(\textcolor{keywordtype}{bool} isInverse, \textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cube_a509a46c5cdfe9c90575770d8bb9469a6}{rotateLayerHorizontally}}(\textcolor{keywordtype}{bool} isInverse, \textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cube_a71bba8566ac2098910aa3639a4c69cd7}{rotateFrontLayer}}(\textcolor{keywordtype}{bool} isInverse, \textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{private}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// rotate one vertical layer (clockwise)}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} rotateVertical(\textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// rotate one vertical layer (anticlockwise)}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} rotateVerticalInverse(\textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// rotate one horizontal layer (clockwise)}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} rotateHorizontal(\textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// rotate one horizontal layer (anticlockwise)}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} rotateHorizontalInverse(\textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// rotate one of front layers (clockwise)}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} rotateFront(\textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// rotate one of front layers (anticlockwise)}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} rotateFrontInverse(\textcolor{keywordtype}{int} layer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// initializer for matrix}}
+\DoxyCodeLine{    \textcolor{keywordtype}{short} **initMatrix(\textcolor{keywordtype}{short} **matrix, \textcolor{keywordtype}{short} side);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// delete matrix}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} deleteMatrix(\textcolor{keywordtype}{short} **matrix) \textcolor{keyword}{const};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// add 'V' command to the list of the last commands}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} addVerticalRotationCommand(\textcolor{keywordtype}{bool} isInverse, \textcolor{keywordtype}{int} layerNum);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// add 'H' command to the list of the last commands}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} addHorizontalRotationCommand(\textcolor{keywordtype}{bool} isInverse, \textcolor{keywordtype}{int} layerNum);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// add 'F' command to the list of the last commands}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} addFrontRotationCommand(\textcolor{keywordtype}{bool} isInverse, \textcolor{keywordtype}{int} layerNum);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// string to int converter}}
+\DoxyCodeLine{    \textcolor{keyword}{static} \textcolor{keywordtype}{int} stringToInt(\textcolor{keyword}{const} std::string \&commands, \textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// detect quote in command}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} detectQuote(\textcolor{keywordtype}{int} i, \textcolor{keywordtype}{bool} \&isInverse, \textcolor{keywordtype}{int} \&j) \textcolor{keyword}{const};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{protected}:}
+\DoxyCodeLine{    \mbox{\hyperlink{class_side}{Side}} \mbox{\hyperlink{class_cube_a6861e3660b9d8b6dbab9be2419558d80}{sides}}[6];          }
+\DoxyCodeLine{    \textcolor{keywordtype}{int} \mbox{\hyperlink{class_cube_a0b22d70154fa77b63777659a8751b799}{size}};               }
+\DoxyCodeLine{    \textcolor{keyword}{static} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_cube_af74e6bd7d6eb83c5ec72ebafca814fdf}{colors}}[6];  }
+\DoxyCodeLine{    \textcolor{keyword}{const} \textcolor{keywordtype}{short} currentColor = 0, backwardColor = 1, upColor = 2, downColor = 3, leftColor = 4, rightColor = 5;}
+\DoxyCodeLine{    std::string \mbox{\hyperlink{class_cube_a5ae653f7b0d7d64d4e3241b4d00d95fb}{rotations}};  }
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} rotateSide(\textcolor{keywordtype}{short} side, \textcolor{keywordtype}{bool} isInverse);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{static} \textcolor{keywordtype}{char} \mbox{\hyperlink{class_cube_a98afa19170942cfa55e3e96cfe451e05}{convertCodeToColor}}(\textcolor{keywordtype}{short} colorCode);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif //RUBICKSCUBE\_CUBE\_H}}
+\end{DoxyCodeInclude}
+ 
