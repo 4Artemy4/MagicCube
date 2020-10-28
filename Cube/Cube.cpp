@@ -5,9 +5,11 @@
 #include <fstream>
 #include "Cube.h"
 
-#define verticalRotationCommand 'V'
-#define horizontalRotationCommand 'H'
-#define frontRotationCommand 'P'
+//#define verticalRotationCommand 'V'
+//#define horizontalRotationCommand 'H'
+//#define frontRotationCommand 'P'
+
+enum Command{verticalRotationCommand = 'V', horizontalRotationCommand = 'H', frontRotationCommand = 'P'};
 
 char Cube::colors[6] = {'W', 'Y', 'R', 'O', 'B', 'G'};
 
@@ -108,25 +110,26 @@ std::istream &operator>>(std::istream &is, Cube &cube) {
 
 bool Cube::command(const std::string &commands) {
     int layerNum;
+    bool isInverse;
     for (int i = 0; i < commands.size(); ++i) {
         if (commands[i] == verticalRotationCommand || commands[i] == horizontalRotationCommand ||
-            commands[i] == frontRotationCommand) {
-            int j = i + 1;
+            commands[i] == frontRotationCommand || '\'') {
+            int j;
+            detectQuote(i, isInverse, j);
             if (j < commands.length() && commands[j] != ' ') layerNum = stringToInt(commands, j);
             else layerNum = 0;
-
             if (layerNum<size) {
                 switch (commands[i]) {
                     case verticalRotationCommand: {
-                        addVerticalRotationCommand(false, layerNum);
+                        addVerticalRotationCommand(isInverse, layerNum);
                         break;
                     }
                     case horizontalRotationCommand: {
-                        addHorizontalRotationCommand(false, layerNum);
+                        addHorizontalRotationCommand(isInverse, layerNum);
                         break;
                     }
                     case frontRotationCommand: {
-                        addFrontRotationCommand(false, layerNum);
+                        addFrontRotationCommand(isInverse, layerNum);
                         break;
                     }
                     default:
@@ -139,6 +142,16 @@ bool Cube::command(const std::string &commands) {
     return true;
 }
 
+void Cube::detectQuote(int i, bool &isInverse, int &j) const {
+    if (i + 2 == '\'') {
+        isInverse = true;
+        j = i+2;
+    }else{
+        isInverse = false;
+        j = i+1;
+    }
+}
+
 std::string Cube::rand() {
     std::string result;
     srand(time(0));
@@ -149,17 +162,17 @@ std::string Cube::rand() {
         switch (std::rand() % 3) {
             case 0: {
                 rotateLayerVertically(false, layer);
-                result += verticalRotationCommand + std::to_string(layer);
+                result += char (verticalRotationCommand) + std::to_string(layer);
                 break;
             }
             case 1: {
                 rotateLayerHorizontally(false, std::rand() % size);
-                result += horizontalRotationCommand + std::to_string(layer);
+                result += char(horizontalRotationCommand) + std::to_string(layer);
                 break;
             }
             case 2: {
                 rotateFrontLayer(false, std::rand() % size);
-                result += frontRotationCommand + std::to_string(layer);
+                result += char(frontRotationCommand) + std::to_string(layer);
                 break;
             }
         }
@@ -343,107 +356,8 @@ int Cube::stringToInt(const std::string &commands, int j) {
     return result;
 }
 
-bool Cube::testVerticalRotation() {
-    Cube correct(3);
-    Cube test(3);
-    test.rotateLayerVertically(true, 0);
-
-    short temp[3];
-    temp[0] = correct.sides[correct.currentColor].matrix[0][0];
-    temp[1] = correct.sides[correct.currentColor].matrix[1][0];
-    temp[2] = correct.sides[correct.currentColor].matrix[2][0];
-
-    correct.sides[correct.currentColor].matrix[0][0] = correct.sides[correct.downColor].matrix[0][0];
-    correct.sides[correct.currentColor].matrix[1][0] = correct.sides[correct.downColor].matrix[1][0];
-    correct.sides[correct.currentColor].matrix[2][0] = correct.sides[correct.downColor].matrix[2][0];
-
-    correct.sides[correct.downColor].matrix[0][0] = correct.sides[correct.backwardColor].matrix[0][0];
-    correct.sides[correct.downColor].matrix[1][0] = correct.sides[correct.backwardColor].matrix[1][0];
-    correct.sides[correct.downColor].matrix[2][0] = correct.sides[correct.backwardColor].matrix[2][0];
-
-    correct.sides[correct.backwardColor].matrix[0][0] = correct.sides[correct.upColor].matrix[0][0];
-    correct.sides[correct.backwardColor].matrix[1][0] = correct.sides[correct.upColor].matrix[1][0];
-    correct.sides[correct.backwardColor].matrix[2][0] = correct.sides[correct.upColor].matrix[2][0];
-
-    correct.sides[correct.upColor].matrix[0][0] = temp[0];
-    correct.sides[correct.upColor].matrix[1][0] = temp[1];
-    correct.sides[correct.upColor].matrix[2][0] = temp[2];
-    return correct == test;
-}
-
-bool Cube::testHorizontalRotation() {
-    Cube correct(3);
-    Cube test(3);
-    test.rotateLayerHorizontally(false, 0);
-
-    short temp[3];
-    temp[0] = correct.sides[correct.currentColor].matrix[0][0];
-    temp[1] = correct.sides[correct.currentColor].matrix[0][1];
-    temp[2] = correct.sides[correct.currentColor].matrix[0][2];
-
-    correct.sides[correct.currentColor].matrix[0][0] = correct.sides[correct.rightColor].matrix[0][0];
-    correct.sides[correct.currentColor].matrix[0][1] = correct.sides[correct.rightColor].matrix[0][1];
-    correct.sides[correct.currentColor].matrix[0][2] = correct.sides[correct.rightColor].matrix[0][2];
-
-    correct.sides[correct.rightColor].matrix[0][0] = correct.sides[correct.backwardColor].matrix[0][0];
-    correct.sides[correct.rightColor].matrix[0][1] = correct.sides[correct.backwardColor].matrix[0][1];
-    correct.sides[correct.rightColor].matrix[0][2] = correct.sides[correct.backwardColor].matrix[0][2];
-
-    correct.sides[correct.backwardColor].matrix[0][0] = correct.sides[correct.leftColor].matrix[0][0];
-    correct.sides[correct.backwardColor].matrix[0][1] = correct.sides[correct.leftColor].matrix[0][1];
-    correct.sides[correct.backwardColor].matrix[0][2] = correct.sides[correct.leftColor].matrix[0][2];
-
-    correct.sides[correct.leftColor].matrix[0][0] = temp[0];
-    correct.sides[correct.leftColor].matrix[0][1] = temp[1];
-    correct.sides[correct.leftColor].matrix[0][2] = temp[2];
-    return correct == test;
-}
-
-bool Cube::testFrontRotation() {
-    Cube correct(3);
-    Cube test(3);
-    test.rotateLayerHorizontally(false, 0);
-
-    short temp[3];
-    temp[0] = correct.sides[correct.currentColor].matrix[0][0];
-    temp[1] = correct.sides[correct.currentColor].matrix[0][1];
-    temp[2] = correct.sides[correct.currentColor].matrix[0][2];
-
-    correct.sides[correct.currentColor].matrix[0][0] = correct.sides[correct.rightColor].matrix[0][0];
-    correct.sides[correct.currentColor].matrix[0][1] = correct.sides[correct.rightColor].matrix[0][1];
-    correct.sides[correct.currentColor].matrix[0][2] = correct.sides[correct.rightColor].matrix[0][2];
-
-    correct.sides[correct.rightColor].matrix[0][0] = correct.sides[correct.backwardColor].matrix[0][0];
-    correct.sides[correct.rightColor].matrix[0][1] = correct.sides[correct.backwardColor].matrix[0][1];
-    correct.sides[correct.rightColor].matrix[0][2] = correct.sides[correct.backwardColor].matrix[0][2];
-
-    correct.sides[correct.backwardColor].matrix[0][0] = correct.sides[correct.leftColor].matrix[0][0];
-    correct.sides[correct.backwardColor].matrix[0][1] = correct.sides[correct.leftColor].matrix[0][1];
-    correct.sides[correct.backwardColor].matrix[0][2] = correct.sides[correct.leftColor].matrix[0][2];
-
-    correct.sides[correct.leftColor].matrix[0][0] = temp[0];
-    correct.sides[correct.leftColor].matrix[0][1] = temp[1];
-    correct.sides[correct.leftColor].matrix[0][2] = temp[2];
-    return true;
-}
-
-bool Cube::testLoadingFromFile() {
-    Cube correct(3);
-    Cube test(3);
-    correct.command("V H P");
-    test.load("Tests/test1");
-    return correct==test;
-}
-
-bool Cube::testSolver() {
-    Cube correct(3);
-    Cube testSolved(3);
-    Cube testRand(3);
-    testSolved.solve();
-
-    testRand.rand();
-    testRand.solve();
-    return correct==testSolved && correct == testRand;
+void Cube::setColor(short value, short sideColor, int i, int j) {
+    sides[sideColor].matrix[i][j] = value;
 }
 
 

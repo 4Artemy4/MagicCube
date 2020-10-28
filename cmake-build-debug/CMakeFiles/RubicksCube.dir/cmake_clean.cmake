@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RubicksCube.dir/Cube3.cpp.o"
   "CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o"
   "CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o"
+  "CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o"
   "CMakeFiles/RubicksCube.dir/main.cpp.o"
   "RubicksCube"
   "RubicksCube.pdb"

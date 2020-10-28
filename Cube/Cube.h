@@ -36,75 +36,6 @@
 /// P2 - rotate the second layer in the frontal plane
 /// H'2 - rotate the second layer in the frontal plane (anticlockwise)
 class Cube {
-private:
-
-    // rotate one vertical layer (clockwise)
-    void rotateVertical(int layer);
-
-    // rotate one vertical layer (anticlockwise)
-    void rotateVerticalInverse(int layer);
-
-    // rotate one horizontal layer (clockwise)
-    void rotateHorizontal(int layer);
-
-    // rotate one horizontal layer (anticlockwise)
-    void rotateHorizontalInverse(int layer);
-
-    // rotate one of front layers (clockwise)
-    void rotateFront(int layer);
-
-    // rotate one of front layers (anticlockwise)
-    void rotateFrontInverse(int layer);
-
-    // initializer for matrix
-    short ** initMatrix(short **matrix, short side);
-
-    // delete matrix
-    void deleteMatrix(short **matrix) const;
-
-    // add 'V' command to the list of the last commands
-    void addVerticalRotationCommand(bool isInverse, int layerNum);
-
-    // add 'H' command to the list of the last commands
-    void addHorizontalRotationCommand(bool isInverse, int layerNum);
-
-    // add 'F' command to the list of the last commands
-    void addFrontRotationCommand(bool isInverse, int layerNum);
-
-    // string to int converter
-    static int stringToInt(const std::string &commands, int j);
-
-protected:
-    Side sides[6];          ///< Sides of the Cube
-    int size;               ///< Cube dimensions
-    static char colors[6];  ///< Array for translating colorCode to Color
-    const short currentColor = 0, backwardColor = 1, upColor = 2, downColor = 3, leftColor = 4, rightColor = 5;
-    std::string rotations;  ///< List of the last commands
-
-    void rotateSide(short side, bool isInverse);
-
-    ///\brief Convert color code to color char
-    ///\param colorCode
-    ///\details: \n
-    /// 0 - White \n
-    /// 1 - Yellow \n
-    /// 2 - Red \n
-    /// 3 - Orange \n
-    /// 4 - Blue \n
-    /// 5 - Green \n
-    static char convertCodeToColor(short colorCode);
-
-    ///\brief Rotate layer vertically
-    ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
-    void rotateLayerVertically(bool isInverse, int layer);
-
-    ///\brief Rotate layer horizontally
-    ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
-    void rotateLayerHorizontally(bool isInverse, int layer);
-
-    ///\brief Rotate Front layer
-    ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
-    void rotateFrontLayer(bool isInverse, int layer);
 
 public:
 
@@ -160,26 +91,92 @@ public:
     ///\param j column number [0, size)
     short getColor(short sideColor, int i, int j) const;
 
+    ///\brief Setter for Cube elements color
+    ///\param sideColor Color code of cube side [0, 5]
+    ///\param i row number [0, size)
+    ///\param j column number [0, size)
+    void setColor(short value, short sideColor, int i, int j);
+
     ///\brief Equality operator
     bool operator==(const Cube &rhs) const;
 
     ///\brief Equality operator
     bool operator!=(const Cube &rhs) const;
 
-    ///\test vertical rotation
-    static bool testVerticalRotation();
+    ///\brief Rotate layer vertically
+    ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
+    void rotateLayerVertically(bool isInverse, int layer);
 
-    ///\test horizontal rotation
-    static bool testHorizontalRotation();
+    ///\brief Rotate layer horizontally
+    ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
+    void rotateLayerHorizontally(bool isInverse, int layer);
 
-    ///\test front rotation
-    static bool testFrontRotation();
+    ///\brief Rotate Front layer
+    ///\param isInverse If false - clockwise rotation, true - anticlockwise rotation
+    void rotateFrontLayer(bool isInverse, int layer);
 
-    ///\test loading from file
-    static bool testLoadingFromFile();
+private:
 
-    ///\test cube solver
-    static bool testSolver();
+    // rotate one vertical layer (clockwise)
+    void rotateVertical(int layer);
+
+    // rotate one vertical layer (anticlockwise)
+    void rotateVerticalInverse(int layer);
+
+    // rotate one horizontal layer (clockwise)
+    void rotateHorizontal(int layer);
+
+    // rotate one horizontal layer (anticlockwise)
+    void rotateHorizontalInverse(int layer);
+
+    // rotate one of front layers (clockwise)
+    void rotateFront(int layer);
+
+    // rotate one of front layers (anticlockwise)
+    void rotateFrontInverse(int layer);
+
+    // initializer for matrix
+    short **initMatrix(short **matrix, short side);
+
+    // delete matrix
+    void deleteMatrix(short **matrix) const;
+
+    // add 'V' command to the list of the last commands
+    void addVerticalRotationCommand(bool isInverse, int layerNum);
+
+    // add 'H' command to the list of the last commands
+    void addHorizontalRotationCommand(bool isInverse, int layerNum);
+
+    // add 'F' command to the list of the last commands
+    void addFrontRotationCommand(bool isInverse, int layerNum);
+
+    // string to int converter
+    static int stringToInt(const std::string &commands, int j);
+
+    // detect quote in command
+    void detectQuote(int i, bool &isInverse, int &j) const;
+
+
+
+protected:
+    Side sides[6];          ///< Sides of the Cube
+    int size;               ///< Cube dimensions
+    static char colors[6];  ///< Array for translating colorCode to Color
+    const short currentColor = 0, backwardColor = 1, upColor = 2, downColor = 3, leftColor = 4, rightColor = 5;
+    std::string rotations;  ///< List of the last commands
+
+    void rotateSide(short side, bool isInverse);
+
+    ///\brief Convert color code to color char
+    ///\param colorCode
+    ///\details: \n
+    /// 0 - White \n
+    /// 1 - Yellow \n
+    /// 2 - Red \n
+    /// 3 - Orange \n
+    /// 4 - Blue \n
+    /// 5 - Green \n
+    static char convertCodeToColor(short colorCode);
 
 };
 

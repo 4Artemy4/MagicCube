@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/art/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/art/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/art/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/art/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/art/CLionProjects/RubicksCube
+CMAKE_SOURCE_DIR = /home/art/University/PPvIS/laba1/RubicksCube
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/art/CLionProjects/RubicksCube/cmake-build-debug
+CMAKE_BINARY_DIR = /home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RubicksCube.dir/depend.make
@@ -79,81 +79,94 @@ include CMakeFiles/RubicksCube.dir/flags.make
 
 CMakeFiles/RubicksCube.dir/main.cpp.o: CMakeFiles/RubicksCube.dir/flags.make
 CMakeFiles/RubicksCube.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RubicksCube.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/main.cpp.o -c /home/art/CLionProjects/RubicksCube/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RubicksCube.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/main.cpp.o -c /home/art/University/PPvIS/laba1/RubicksCube/main.cpp
 
 CMakeFiles/RubicksCube.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubicksCube.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/CLionProjects/RubicksCube/main.cpp > CMakeFiles/RubicksCube.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/University/PPvIS/laba1/RubicksCube/main.cpp > CMakeFiles/RubicksCube.dir/main.cpp.i
 
 CMakeFiles/RubicksCube.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubicksCube.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/CLionProjects/RubicksCube/main.cpp -o CMakeFiles/RubicksCube.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/University/PPvIS/laba1/RubicksCube/main.cpp -o CMakeFiles/RubicksCube.dir/main.cpp.s
 
 CMakeFiles/RubicksCube.dir/Cube/Side.cpp.o: CMakeFiles/RubicksCube.dir/flags.make
 CMakeFiles/RubicksCube.dir/Cube/Side.cpp.o: ../Cube/Side.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RubicksCube.dir/Cube/Side.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/Cube/Side.cpp.o -c /home/art/CLionProjects/RubicksCube/Cube/Side.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RubicksCube.dir/Cube/Side.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/Cube/Side.cpp.o -c /home/art/University/PPvIS/laba1/RubicksCube/Cube/Side.cpp
 
 CMakeFiles/RubicksCube.dir/Cube/Side.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubicksCube.dir/Cube/Side.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/CLionProjects/RubicksCube/Cube/Side.cpp > CMakeFiles/RubicksCube.dir/Cube/Side.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/University/PPvIS/laba1/RubicksCube/Cube/Side.cpp > CMakeFiles/RubicksCube.dir/Cube/Side.cpp.i
 
 CMakeFiles/RubicksCube.dir/Cube/Side.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubicksCube.dir/Cube/Side.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/CLionProjects/RubicksCube/Cube/Side.cpp -o CMakeFiles/RubicksCube.dir/Cube/Side.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/University/PPvIS/laba1/RubicksCube/Cube/Side.cpp -o CMakeFiles/RubicksCube.dir/Cube/Side.cpp.s
 
 CMakeFiles/RubicksCube.dir/Cube3.cpp.o: CMakeFiles/RubicksCube.dir/flags.make
 CMakeFiles/RubicksCube.dir/Cube3.cpp.o: ../Cube3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RubicksCube.dir/Cube3.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/Cube3.cpp.o -c /home/art/CLionProjects/RubicksCube/Cube3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RubicksCube.dir/Cube3.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/Cube3.cpp.o -c /home/art/University/PPvIS/laba1/RubicksCube/Cube3.cpp
 
 CMakeFiles/RubicksCube.dir/Cube3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubicksCube.dir/Cube3.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/CLionProjects/RubicksCube/Cube3.cpp > CMakeFiles/RubicksCube.dir/Cube3.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/University/PPvIS/laba1/RubicksCube/Cube3.cpp > CMakeFiles/RubicksCube.dir/Cube3.cpp.i
 
 CMakeFiles/RubicksCube.dir/Cube3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubicksCube.dir/Cube3.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/CLionProjects/RubicksCube/Cube3.cpp -o CMakeFiles/RubicksCube.dir/Cube3.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/University/PPvIS/laba1/RubicksCube/Cube3.cpp -o CMakeFiles/RubicksCube.dir/Cube3.cpp.s
 
 CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o: CMakeFiles/RubicksCube.dir/flags.make
 CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o: ../Cube/Cube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o -c /home/art/CLionProjects/RubicksCube/Cube/Cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o -c /home/art/University/PPvIS/laba1/RubicksCube/Cube/Cube.cpp
 
 CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/CLionProjects/RubicksCube/Cube/Cube.cpp > CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/University/PPvIS/laba1/RubicksCube/Cube/Cube.cpp > CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.i
 
 CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/CLionProjects/RubicksCube/Cube/Cube.cpp -o CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/University/PPvIS/laba1/RubicksCube/Cube/Cube.cpp -o CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.s
 
 CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o: CMakeFiles/RubicksCube.dir/flags.make
 CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o: ../GUI/Drawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o -c /home/art/CLionProjects/RubicksCube/GUI/Drawer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o -c /home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.cpp
 
 CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/CLionProjects/RubicksCube/GUI/Drawer.cpp > CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.cpp > CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.i
 
 CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/CLionProjects/RubicksCube/GUI/Drawer.cpp -o CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.cpp -o CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.s
 
 CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o: CMakeFiles/RubicksCube.dir/flags.make
 CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o: ../GUI/Button.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o -c /home/art/CLionProjects/RubicksCube/GUI/Button.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o -c /home/art/University/PPvIS/laba1/RubicksCube/GUI/Button.cpp
 
 CMakeFiles/RubicksCube.dir/GUI/Button.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubicksCube.dir/GUI/Button.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/CLionProjects/RubicksCube/GUI/Button.cpp > CMakeFiles/RubicksCube.dir/GUI/Button.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/University/PPvIS/laba1/RubicksCube/GUI/Button.cpp > CMakeFiles/RubicksCube.dir/GUI/Button.cpp.i
 
 CMakeFiles/RubicksCube.dir/GUI/Button.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubicksCube.dir/GUI/Button.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/CLionProjects/RubicksCube/GUI/Button.cpp -o CMakeFiles/RubicksCube.dir/GUI/Button.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/University/PPvIS/laba1/RubicksCube/GUI/Button.cpp -o CMakeFiles/RubicksCube.dir/GUI/Button.cpp.s
+
+CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o: CMakeFiles/RubicksCube.dir/flags.make
+CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o: ../Tests/tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o -c /home/art/University/PPvIS/laba1/RubicksCube/Tests/tests.cpp
+
+CMakeFiles/RubicksCube.dir/Tests/tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubicksCube.dir/Tests/tests.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/art/University/PPvIS/laba1/RubicksCube/Tests/tests.cpp > CMakeFiles/RubicksCube.dir/Tests/tests.cpp.i
+
+CMakeFiles/RubicksCube.dir/Tests/tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubicksCube.dir/Tests/tests.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/art/University/PPvIS/laba1/RubicksCube/Tests/tests.cpp -o CMakeFiles/RubicksCube.dir/Tests/tests.cpp.s
 
 # Object files for target RubicksCube
 RubicksCube_OBJECTS = \
@@ -162,7 +175,8 @@ RubicksCube_OBJECTS = \
 "CMakeFiles/RubicksCube.dir/Cube3.cpp.o" \
 "CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o" \
 "CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o" \
-"CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o"
+"CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o" \
+"CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o"
 
 # External object files for target RubicksCube
 RubicksCube_EXTERNAL_OBJECTS =
@@ -173,13 +187,14 @@ RubicksCube: CMakeFiles/RubicksCube.dir/Cube3.cpp.o
 RubicksCube: CMakeFiles/RubicksCube.dir/Cube/Cube.cpp.o
 RubicksCube: CMakeFiles/RubicksCube.dir/GUI/Drawer.cpp.o
 RubicksCube: CMakeFiles/RubicksCube.dir/GUI/Button.cpp.o
+RubicksCube: CMakeFiles/RubicksCube.dir/Tests/tests.cpp.o
 RubicksCube: CMakeFiles/RubicksCube.dir/build.make
 RubicksCube: /usr/lib/libsfml-graphics.so.2.5.1
 RubicksCube: /usr/lib/libsfml-audio.so.2.5.1
 RubicksCube: /usr/lib/libsfml-window.so.2.5.1
 RubicksCube: /usr/lib/libsfml-system.so.2.5.1
 RubicksCube: CMakeFiles/RubicksCube.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable RubicksCube"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable RubicksCube"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RubicksCube.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -192,6 +207,6 @@ CMakeFiles/RubicksCube.dir/clean:
 .PHONY : CMakeFiles/RubicksCube.dir/clean
 
 CMakeFiles/RubicksCube.dir/depend:
-	cd /home/art/CLionProjects/RubicksCube/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/art/CLionProjects/RubicksCube /home/art/CLionProjects/RubicksCube /home/art/CLionProjects/RubicksCube/cmake-build-debug /home/art/CLionProjects/RubicksCube/cmake-build-debug /home/art/CLionProjects/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/art/University/PPvIS/laba1/RubicksCube /home/art/University/PPvIS/laba1/RubicksCube /home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug /home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug /home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/CMakeFiles/RubicksCube.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RubicksCube.dir/depend
 

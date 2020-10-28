@@ -5,133 +5,136 @@
 		<Option title="RubicksCube"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\SFML\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\..\..\usr\lib64\cmake\SFML\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/art/CLionProjects/RubicksCube/cmake-build-debug"/>
+				<Option working_dir="/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/art/CLionProjects/RubicksCube/cmake-build-debug"/>
+				<Option working_dir="/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/art/CLionProjects/RubicksCube/cmake-build-debug"/>
+				<Option working_dir="/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="RubicksCube">
-				<Option output="/home/art/CLionProjects/RubicksCube/cmake-build-debug/RubicksCube" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/art/CLionProjects/RubicksCube/cmake-build-debug"/>
+				<Option output="/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/RubicksCube" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 RubicksCube"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 RubicksCube"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="RubicksCube/fast">
-				<Option output="/home/art/CLionProjects/RubicksCube/cmake-build-debug/RubicksCube" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/art/CLionProjects/RubicksCube/cmake-build-debug"/>
+				<Option output="/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/RubicksCube" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/../../../../include/c++/10.1.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.1.0/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 RubicksCube/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/CLionProjects/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 RubicksCube/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/art/University/PPvIS/laba1/RubicksCube/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube/Cube.cpp">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/Cube/Cube.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube/Cube.h">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/Cube/Cube.h">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube/Side.cpp">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/Cube/Side.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube/Side.h">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/Cube/Side.h">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube3.cpp">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/Cube3.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/Cube3.h">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/Cube3.h">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/GUI/Button.cpp">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/GUI/Button.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/GUI/Button.h">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/GUI/Button.h">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/GUI/Drawer.cpp">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/GUI/Drawer.h">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/GUI/Drawer.h">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/main.cpp">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/Tests/tests.cpp">
 			<Option target="RubicksCube"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/CMakeLists.txt">
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/main.cpp">
+			<Option target="RubicksCube"/>
+		</Unit>
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/../../../../../../usr/lib64/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLConfigDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/../../../../../../usr/lib64/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/../../../../../../usr/lib64/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLSharedTargets-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/../../../../../../usr/lib64/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/art/CLionProjects/RubicksCube/../../../../usr/lib64/cmake/SFML/SFMLSharedTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
+		<Unit filename="/home/art/University/PPvIS/laba1/RubicksCube/../../../../../../usr/lib64/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
